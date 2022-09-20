@@ -89,7 +89,7 @@ body {
     padding: 19px;
     width: 85%;
     margin: 0 auto;
-    border-radius: 6.82353px 0px 0px 6.82353px;
+    border-radius: 6.82353px;
     border: 2px solid #8080804a;
   }
   .exp-tim {
@@ -449,19 +449,19 @@ body {
     padding: 18px;
     width: 60%;
     border-radius: 6.82353px 0px 0px 6.82353px;
-    border-left: 3px solid #8080804a;
-    border-top: 3px solid #8080804a;
-    border-bottom: 3px solid #8080804a;
+    border-left: 2px solid #8080804a;
+    border-top: 2px solid #8080804a;
+    border-bottom: 2px solid #8080804a;
   }
   .sub-container2 {
     border-radius: 0px 6.82353px 6.82353px 0px;
     background-color: #f1f1f1;
     width: 40%;
     padding: 18px;
-    border-left: 3px solid #8080804a;
-    border-right: 3px solid #8080804a;
-    border-top: 3px solid #8080804a;
-    border-bottom: 3px solid #8080804a;
+    border-left: 2px solid #8080804a;
+    border-right: 2px solid #8080804a;
+    border-top: 2px solid #8080804a;
+    border-bottom: 2px solid #8080804a;
   }
   .sub-container2-mercht {
     color: #000000;
