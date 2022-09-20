@@ -131,6 +131,10 @@ body {
   .rsnd-btn {
     width: 40%;
     height: 48px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
     border-radius: 0px 6.82353px 6.82353px 0px;
     background-color: #ffffff;
     color: #cb9395;
@@ -138,6 +142,9 @@ body {
     border: 1px solid #e5e5e5;
     font-family: "Lato", sans-serif;
     font-size: 12px;
+  }
+  .rsnd-btn p {
+    margin: 0px;
   }
   .cfm-btn {
     display: flex;
@@ -339,6 +346,10 @@ body {
     font-family: "Lato", sans-serif;
   }
   .rsnd-btn {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
     width: 40%;
     height: 48px;
     border-radius: 0px 6.82353px 6.82353px 0px;
@@ -348,6 +359,9 @@ body {
     border: 1px solid #e5e5e5;
     font-family: "Lato", sans-serif;
     font-size: 12px;
+  }
+  .rsnd-btn p {
+    margin: 0px;
   }
   .cfm-btn {
     display: flex;
@@ -380,7 +394,7 @@ body {
     display: flex;
     margin: 0 auto;
     max-width: 658px;
-    height: 321px;
+    height: 298px;
   }
   .sub-container1 {
     padding: 32px;
@@ -424,7 +438,7 @@ body {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    margin-top: 76px;
+    margin-top: 44px;
     gap: 3px;
     font-size: 11px;
     color: #808080;
