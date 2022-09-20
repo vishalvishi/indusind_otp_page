@@ -9,6 +9,15 @@ body {
   .sub-container2 {
     display: none;
   }
+  .footer-pgh {
+    display: flex;
+    max-width: 658px;
+    height: 100px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
   .footer-1 {
     display: flex;
     margin-bottom: 26px;
@@ -21,9 +30,7 @@ body {
     align-items: center;
   }
   .footer-2 {
-    text-align: center;
     margin-top: 0;
-    padding: 22px;
     line-height: 17px;
     border-top: 2px solid #8080804a;
     background-color: #f1f1f1;
@@ -270,15 +277,17 @@ body {
   .footer-pgh {
     display: flex;
     max-width: 658px;
+    height: 63px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
     margin: 0 auto;
   }
   .footer-2 {
-    text-align: center;
     margin-top: 0;
     border-top: 2px solid #8080804a;
     background-color: #f1f1f1;
     font-size: 12px;
-    padding: 22px;
     line-height: 17px;
     font-family: "Lato", sans-serif;
     font-weight: bold;
