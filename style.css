@@ -90,7 +90,7 @@
     width: 60%;
     height: 48px;
     letter-spacing: 8px;
-    padding-left: 34px;
+    text-align: center;
     border-radius: 6.82353px 0px 0px 6.82353px;
     font-weight: bold;
     border: 1px solid #e5e5e5;
@@ -277,7 +277,7 @@
     width: 60%;
     height: 48px;
     letter-spacing: 9px;
-    padding-left: 34px;
+    text-align: center;
     border-radius: 6.82353px 0px 0px 6.82353px;
     font-weight: bold;
     border: 1px solid #e5e5e5;
