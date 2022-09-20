@@ -50,14 +50,13 @@
                       type="text"
                       maxlength="6"
                       inputmode="numeric"
+                      placeholder="Enter OTP"
                       autocomplete="off"
                       onkeypress="return onlyNumberKey(event)"
                     />
                     <button class="rsnd-btn">
-                      <!-- <div> -->
                       <p>Resend OTP</p>
                       <p>In 50s</p>
-                      <!-- </div> -->
                     </button>
                   </div>
                   <button class="cfm-btn" type="submit">Confirm & Pay</button>
@@ -88,7 +87,9 @@
           </div>
         </div>
         <div class="main-container2">
-          <p class="exp-tim">Page will expire in 05:00 mins</p>
+          <p class="exp-tim">
+            Page will expire in <span class="tmr">05:00</span> mins
+          </p>
         </div>
         <main class="container">
           <form action="Javascript:void(0)"></form>
