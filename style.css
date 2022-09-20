@@ -10,6 +10,7 @@ body {
     display: none;
   }
   .footer-pgh {
+    padding: 11px;
     display: flex;
     max-width: 658px;
     height: 100px;
@@ -294,6 +295,7 @@ body {
     display: none;
   }
   .footer-pgh {
+    padding: 11px;
     display: flex;
     max-width: 579px;
     height: 63px;
