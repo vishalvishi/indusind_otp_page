@@ -13,15 +13,15 @@ body {
   }
   .logo2 {
     height: 10px;
-    width: 80px;
+    width: 84px;
   }
   .logo3 {
     height: 13px;
     width: 13px;
   }
   .logo4 {
-    height: 8px;
-    width: 26px;
+    height: 7px;
+    width: 21px;
   }
   .logo5 {
     height: 20px;
@@ -75,7 +75,7 @@ body {
   }
   .ref-ecom {
     border: 1px solid #f1f1f1;
-    border-radius: 6.82353px 6.82353px 6.82353px 6.82353px;
+    border-radius: 3.82353px;
     background-color: #f1f1f1;
     height: 19px;
     padding: 7px;
@@ -336,12 +336,12 @@ body {
     width: 80px;
   }
   .logo3 {
-    height: 20px;
-    width: 20px;
+    height: 16px;
+    width: 16px;
   }
   .logo4 {
-    height: 8px;
-    width: 28px;
+    height: 7px;
+    width: 21px;
   }
   .logo5 {
     height: 20px;
@@ -394,7 +394,7 @@ body {
   }
   .ref-ecom {
     border: 1px solid #f1f1f1;
-    border-radius: 4.82353px;
+    border-radius: 3.82353px;
     background-color: #f1f1f1;
     height: 18px;
     padding: 7px;
