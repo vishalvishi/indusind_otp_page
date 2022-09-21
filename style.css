@@ -8,12 +8,12 @@ body {
 
 @media only screen and (max-width: 409px) {
   .logo1 {
-    height: 30px;
-    width: 27px;
+    height: 9px;
+    width: 30px;
   }
   .logo2 {
     height: 10px;
-    width: 104px;
+    width: 84px;
   }
   .logo3 {
     height: 13px;
@@ -141,7 +141,7 @@ body {
   }
   .container {
     display: flex;
-    max-width: 100%;
+    max-width: 85%;
     margin: 0 auto;
     height: 27px;
     padding: 0 15px;
