@@ -953,7 +953,7 @@ html {
     align-items: center;
   }
 }
-@media only screen and (max-width: 600px) and (min-height: 512px) {
+@media only screen and (max-width: 600px) and (min-height: 450px) {
   .main-footer {
     position: fixed;
     bottom: 0px;
