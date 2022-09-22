@@ -301,6 +301,7 @@ body {
   }
   .parent-container1 {
     width: 100%;
+    margin-top: 6%;
     margin-bottom: auto;
     /* border: 1px solid rgb(2, 13, 78); */
   }
@@ -613,6 +614,7 @@ body {
   }
   .parent-container1 {
     width: 100%;
+    margin-top: 6%;
     margin-bottom: auto;
     /* border: 1px solid rgb(2, 13, 78); */
   }
@@ -910,6 +912,7 @@ body {
   }
   .parent-container1 {
     margin-bottom: auto;
+    margin-top: 6%;
     width: 100%;
     /* border: 1px solid rgb(2, 13, 78); */
   }
