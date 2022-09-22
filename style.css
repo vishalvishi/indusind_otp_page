@@ -6,7 +6,7 @@ body {
   padding: 0;
 }
 
-@media only screen and (max-width: 409px) {
+@media only screen and (max-width: 299px) {
   .logo1 {
     height: 9px;
     width: 30px;
@@ -20,16 +20,16 @@ body {
     width: 13px;
   }
   .logo4 {
-    height: 7px;
-    width: 21px;
+    height: 15px;
+    width: 31px;
   }
   .logo5 {
     height: 20px;
     width: 20px;
   }
   .logo6 {
-    height: 20px;
-    width: 45px;
+    height: 17px;
+    width: 35px;
   }
   .logo7 {
     height: 30px;
@@ -326,7 +326,7 @@ body {
     align-items: center;
   }
 }
-@media only screen and (min-width: 410px) and (max-width: 599px) {
+@media only screen and (min-width: 300px) and (max-width: 599px) {
   .logo1 {
     height: 9px;
     width: 30px;
@@ -340,16 +340,16 @@ body {
     width: 16px;
   }
   .logo4 {
-    height: 7px;
-    width: 21px;
+    height: 15px;
+    width: 31px;
   }
   .logo5 {
     height: 20px;
     width: 20px;
   }
   .logo6 {
-    height: 20px;
-    width: 45px;
+    height: 17px;
+    width: 35px;
   }
   .logo7 {
     height: 30px;
@@ -659,8 +659,8 @@ body {
     width: 17px;
   }
   .logo6 {
-    height: 9px;
-    width: 37px;
+    height: 17px;
+    width: 35px;
   }
   .logo7 {
     height: 21px;
