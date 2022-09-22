@@ -389,7 +389,7 @@ html {
   .footer-1 {
     display: flex;
     margin-bottom: 1px;
-    font-size: 8px;
+    font-size: 10px;
     color: #808080;
     font-weight: bold;
     font-family: "Lato", sans-serif;
@@ -399,7 +399,7 @@ html {
   }
   .footer-2 {
     margin-top: 0;
-    line-height: 12px;
+    line-height: 9px;
     border-top: 2px solid #8080804a;
     background-color: #f1f1f1;
     font-size: 9px;
@@ -893,7 +893,7 @@ html {
     align-items: center;
     margin-top: 14px;
     gap: 3px;
-    font-size: 9px;
+    font-size: 10px;
     color: #808080;
     align-items: center;
     font-weight: bold;
@@ -1523,7 +1523,7 @@ html {
     align-items: center;
     margin-top: 43px;
     gap: 3px;
-    font-size: 9px;
+    font-size: 10px;
     color: #808080;
     align-items: center;
     font-weight: bold;
