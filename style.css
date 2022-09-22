@@ -7,6 +7,10 @@ body {
 }
 
 @media only screen and (max-width: 299px) {
+  .main-footer {
+    position: fixed;
+    bottom: 0px;
+  }
   .logo1 {
     height: 9px;
     width: 30px;
@@ -328,6 +332,10 @@ body {
   }
 }
 @media only screen and (min-width: 300px) and (max-width: 599px) {
+  .main-footer {
+    position: fixed;
+    bottom: 0px;
+  }
   .logo1 {
     height: 9px;
     width: 30px;
@@ -641,6 +649,10 @@ body {
   }
 }
 @media only screen and (min-width: 600px) and (max-width: 1500px) {
+  .main-footer {
+    position: fixed;
+    bottom: 0px;
+  }
   .logo1 {
     height: 12px;
     width: 35px;
