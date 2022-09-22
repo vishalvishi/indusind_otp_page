@@ -119,12 +119,6 @@
         if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57)) return false;
         return true;
       }
-      document
-        .querySelector("input")
-        .addEventListener("focusin", () => (document.body.scrollTop = 90));
-      document
-        .querySelector("input")
-        .addEventListener("focusout", () => (document.body.scrollTop = 0));
     </script>
   </body>
 </html>
