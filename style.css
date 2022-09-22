@@ -55,7 +55,7 @@ body {
   }
   .footer-1 {
     display: flex;
-    margin-bottom: 48px;
+    margin-bottom: 1px;
     font-size: 8px;
     color: #808080;
     font-weight: bold;
@@ -300,7 +300,6 @@ body {
     align-items: center;
   }
   .parent-container1 {
-    margin-top: 25px;
     width: 100%;
     margin-bottom: auto;
     /* border: 1px solid rgb(2, 13, 78); */
@@ -376,7 +375,7 @@ body {
   }
   .footer-1 {
     display: flex;
-    margin-bottom: 48px;
+    margin-bottom: 1px;
     font-size: 8px;
     color: #808080;
     font-weight: bold;
@@ -613,7 +612,6 @@ body {
     align-items: center;
   }
   .parent-container1 {
-    margin-top: 25px;
     width: 100%;
     margin-bottom: auto;
     /* border: 1px solid rgb(2, 13, 78); */
@@ -911,7 +909,6 @@ body {
     align-items: center;
   }
   .parent-container1 {
-    margin-top: 25px;
     margin-bottom: auto;
     width: 100%;
     /* border: 1px solid rgb(2, 13, 78); */
