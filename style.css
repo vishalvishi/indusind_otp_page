@@ -161,6 +161,7 @@ body {
     font-size: 8px;
   }
   .inpt {
+    outline: none;
     width: 60%;
     height: 31px;
     letter-spacing: 8px;
@@ -477,6 +478,7 @@ body {
     font-size: 10px;
   }
   .inpt {
+    outline: none;
     width: 60%;
     height: 34px;
     letter-spacing: 8px;
@@ -621,7 +623,6 @@ body {
   }
   .parent-container1 {
     width: 100%;
-    margin-top: 23px;
     margin-bottom: auto;
     /* border: 1px solid rgb(2, 13, 78); */
   }
@@ -756,6 +757,7 @@ body {
     font-size: 10px;
   }
   .inpt {
+    outline: none;
     width: 60%;
     height: 39px;
     letter-spacing: 9px;
