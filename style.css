@@ -1342,8 +1342,9 @@ html {
     justify-content: center;
   }
   .error {
-    font-size: 10px;
+    font-size: 12px;
     gap: 4px;
+    text-align: center;
     align-items: center;
     position: absolute;
     font-family: "Lato", sans-serif;
