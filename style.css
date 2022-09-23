@@ -1403,7 +1403,7 @@ html {
     margin-top: 0;
     border-top: 2px solid #8080804a;
     background-color: #f1f1f1;
-    font-size: 10px;
+    font-size: 11px;
     line-height: 12px;
     font-family: "Lato", sans-serif;
     font-weight: bold;
@@ -1418,7 +1418,7 @@ html {
     display: flex;
     height: 20px;
     padding: 7px;
-    width: 179px;
+    width: 196px;
     align-items: center;
     border-radius: 3.82353px;
     border: 1px solid #f1f1f1;
@@ -1428,7 +1428,7 @@ html {
     display: none;
   }
   .exp-tim {
-    font-size: 12px;
+    font-size: 13px;
     font-family: "Lato", sans-serif;
     font-weight: bold;
   }
@@ -1448,18 +1448,18 @@ html {
   }
   .inner-sub-container2 {
     display: flex;
-    margin: 17px 0px 0px 0px;
+    margin: 20px 0px 0px 0px;
   }
   .hdr-cont {
     font-weight: bold;
     line-height: 14px;
     font-family: "Lato", sans-serif;
-    font-size: 12px;
+    font-size: 14px;
   }
   .inpt {
     outline: none;
     width: 60%;
-    height: 39px;
+    height: 57px;
     letter-spacing: 9px;
     text-align: center;
     border-radius: 6.82353px 0px 0px 6.82353px;
@@ -1469,12 +1469,12 @@ html {
     font-size: 17px;
   }
   .inpt::-webkit-input-placeholder {
-    font-size: 12px;
+    font-size: 15px;
     font-family: "Lato", sans-serif;
     letter-spacing: 1px;
   }
   .inpt:-moz-placeholder {
-    font-size: 12px;
+    font-size: 15px;
     font-family: "Lato", sans-serif;
     letter-spacing: 1px;
   }
@@ -1482,7 +1482,7 @@ html {
     font-weight: bold;
     line-height: 17px;
     font-family: "Lato", sans-serif;
-    font-size: 10px;
+    font-size: 11px;
   }
   .rsnd-btn {
     justify-content: center;
@@ -1490,21 +1490,21 @@ html {
     flex-direction: column;
     display: flex;
     width: 40%;
-    height: 39px;
+    height: 57px;
     border-radius: 0px 6.82353px 6.82353px 0px;
     background-color: #ffffff;
     color: #cb9395;
     font-weight: bold;
     border: 1px solid #e5e5e5;
     font-family: "Lato", sans-serif;
-    font-size: 12px;
+    font-size: 14px;
   }
   .rsnd-btn p {
     margin: 0px;
   }
   .rsnd-btn p:nth-child(2) {
     color: #000000;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: bold;
     font-family: "Lato", sans-serif;
   }
@@ -1520,11 +1520,11 @@ html {
     border-radius: 6.82353px;
     border: 1px solid #cb9395;
     background-color: #cb9395;
-    height: 35px;
+    height: 50px;
     font-weight: bold;
     font-family: "Lato", sans-serif;
-    font-size: 12px;
-    margin: 37px auto 0px auto;
+    font-size: 14px;
+    margin: 55px auto 0px auto;
   }
   header {
     height: 60px;
@@ -1542,7 +1542,7 @@ html {
     display: flex;
     margin: 0 auto;
     max-width: 579px;
-    height: 247px;
+    height: 302px;
   }
   .sub-container1 {
     padding: 17px;
@@ -1565,13 +1565,13 @@ html {
   .sub-container2-mercht {
     color: #000000;
     text-align: end;
-    font-size: 12px;
+    font-size: 15px;
     font-weight: bold;
     font-family: "Lato", sans-serif;
   }
   .sub-container2-pgh {
     color: #808080;
-    font-size: 12px;
+    font-size: 15px;
     text-align: end;
     margin-top: 0px;
     height: 17px;
@@ -1586,7 +1586,7 @@ html {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    margin-top: 43px;
+    margin-top: 78px;
     gap: 3px;
     font-size: 10px;
     color: #808080;
@@ -1630,7 +1630,7 @@ html {
   }
   .main-container2 {
     border-radius: 0px 0px 8px 8px;
-    height: 33px;
+    height: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
