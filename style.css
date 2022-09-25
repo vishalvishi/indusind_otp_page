@@ -91,7 +91,6 @@ html {
     background-color: #f1f1f1;
     font-size: 8px;
     font-family: "Lato", sans-serif;
-    font-weight: bold;
   }
   .ref-ecom {
     border: 1px solid #f1f1f1;
@@ -150,14 +149,12 @@ html {
   .exp-tim {
     font-size: 8px;
     font-family: "Lato", sans-serif;
-    font-weight: bold;
   }
   .ft-p {
     font-family: "Lato", sans-serif;
     color: #cb9395;
     font-size: 9px;
     margin: 0px;
-    font-weight: bold;
   }
   .container {
     display: flex;
@@ -172,7 +169,6 @@ html {
   }
   .hdr-cont {
     margin-top: 1px;
-    font-weight: bold;
     font-family: "Lato", sans-serif;
     font-size: 8px;
   }
@@ -183,7 +179,6 @@ html {
     letter-spacing: 8px;
     text-align: center;
     border-radius: 6.82353px 0px 0px 6.82353px;
-    font-weight: bold;
     border: 1px solid #e5e5e5;
     font-family: "Lato", sans-serif;
     font-size: 9px;
@@ -200,7 +195,6 @@ html {
   }
   .hdr-p {
     font-size: 7px;
-    font-weight: bold;
     font-family: "Lato", sans-serif;
   }
   .rsnd-btn {
@@ -213,7 +207,6 @@ html {
     border-radius: 0px 6.82353px 6.82353px 0px;
     background-color: #ffffff;
     color: #cb9395;
-    font-weight: bold;
     border: 1px solid #e5e5e5;
     font-family: "Lato", sans-serif;
     font-size: 8px;
@@ -224,7 +217,6 @@ html {
   .rsnd-btn p:nth-child(2) {
     color: #000000;
     font-size: 8px;
-    font-weight: bold;
     font-family: "Lato", sans-serif;
   }
   .tmr {
@@ -300,7 +292,6 @@ html {
     color: #808080;
     font-size: 14px;
     align-items: center;
-    font-weight: bold;
     font-family: "Lato", sans-serif;
   }
   .sub-container2-amt {
@@ -430,7 +421,6 @@ html {
     background-color: #f1f1f1;
     font-size: 9px;
     font-family: "Lato", sans-serif;
-    font-weight: bold;
   }
   .ref-ecom {
     border: 1px solid #f1f1f1;
@@ -482,13 +472,11 @@ html {
   .exp-tim {
     font-size: 10px;
     font-family: "Lato", sans-serif;
-    font-weight: bold;
   }
   .ft-p {
     font-family: "Lato", sans-serif;
     color: #cb9395;
     font-size: 10px;
-    font-weight: bold;
   }
   .container {
     display: flex;
@@ -503,7 +491,6 @@ html {
   }
   .hdr-cont {
     margin-top: 1px;
-    font-weight: bold;
     font-family: "Lato", sans-serif;
     font-size: 10px;
   }
@@ -514,7 +501,6 @@ html {
     letter-spacing: 8px;
     text-align: center;
     border-radius: 6.82353px 0px 0px 6.82353px;
-    font-weight: bold;
     border: 1px solid #e5e5e5;
     font-family: "Lato", sans-serif;
     font-size: 17px;
@@ -531,7 +517,6 @@ html {
   }
   .hdr-p {
     font-size: 9px;
-    font-weight: bold;
     font-family: "Lato", sans-serif;
   }
   .rsnd-btn {
@@ -544,7 +529,6 @@ html {
     border-radius: 0px 6.82353px 6.82353px 0px;
     background-color: #ffffff;
     color: #cb9395;
-    font-weight: bold;
     border: 1px solid #e5e5e5;
     font-family: "Lato", sans-serif;
     font-size: 10px;
@@ -554,8 +538,7 @@ html {
   }
   .rsnd-btn p:nth-child(2) {
     color: #000000;
-    font-size: 10px;
-    font-weight: bold;
+    font-size: 9px;
     font-family: "Lato", sans-serif;
   }
   .tmr {
@@ -631,7 +614,6 @@ html {
     color: #808080;
     font-size: 14px;
     align-items: center;
-    font-weight: bold;
     font-family: "Lato", sans-serif;
   }
   .sub-container2-amt {
@@ -750,7 +732,6 @@ html {
     font-size: 10px;
     line-height: 12px;
     font-family: "Lato", sans-serif;
-    font-weight: bold;
   }
   .inner-mbl-sub-container2 {
     padding: 19px;
@@ -774,13 +755,11 @@ html {
   .exp-tim {
     font-size: 11px;
     font-family: "Lato", sans-serif;
-    font-weight: bold;
   }
   .ft-p {
     font-family: "Lato", sans-serif;
     color: #cb9395;
     font-size: 10px;
-    font-weight: bold;
   }
   .container {
     display: flex;
@@ -795,7 +774,6 @@ html {
     margin: 17px 0px 0px 0px;
   }
   .hdr-cont {
-    font-weight: bold;
     line-height: 14px;
     font-family: "Lato", sans-serif;
     font-size: 10px;
@@ -807,7 +785,6 @@ html {
     letter-spacing: 9px;
     text-align: center;
     border-radius: 6.82353px 0px 0px 6.82353px;
-    font-weight: bold;
     border: 1px solid #e5e5e5;
     font-family: "Lato", sans-serif;
     font-size: 17px;
@@ -823,7 +800,6 @@ html {
     letter-spacing: 1px;
   }
   .hdr-p {
-    font-weight: bold;
     line-height: 17px;
     font-family: "Lato", sans-serif;
     font-size: 10px;
@@ -838,7 +814,6 @@ html {
     border-radius: 0px 6.82353px 6.82353px 0px;
     background-color: #ffffff;
     color: #cb9395;
-    font-weight: bold;
     border: 1px solid #e5e5e5;
     font-family: "Lato", sans-serif;
     font-size: 11px;
@@ -848,8 +823,7 @@ html {
   }
   .rsnd-btn p:nth-child(2) {
     color: #000000;
-    font-size: 11px;
-    font-weight: bold;
+    font-size: 10px;
     font-family: "Lato", sans-serif;
   }
   .tmr {
@@ -946,7 +920,6 @@ html {
     font-size: 12px;
     flex-flow: row-reverse wrap;
     align-items: center;
-    font-weight: bold;
     font-family: "Lato", sans-serif;
   }
   .sub-container2-amt {
@@ -1078,7 +1051,6 @@ html {
     background-color: #f1f1f1;
     font-size: 8px;
     font-family: "Lato", sans-serif;
-    font-weight: bold;
   }
   .ref-ecom {
     border: 1px solid #f1f1f1;
@@ -1137,14 +1109,12 @@ html {
   .exp-tim {
     font-size: 10px;
     font-family: "Lato", sans-serif;
-    font-weight: bold;
   }
   .ft-p {
     font-family: "Lato", sans-serif;
     color: #cb9395;
     font-size: 10px;
     margin: 0px;
-    font-weight: bold;
   }
   .container {
     display: flex;
@@ -1159,7 +1129,6 @@ html {
   }
   .hdr-cont {
     margin-top: 1px;
-    font-weight: bold;
     font-family: "Lato", sans-serif;
     font-size: 11px;
   }
@@ -1170,7 +1139,6 @@ html {
     letter-spacing: 8px;
     text-align: center;
     border-radius: 6.82353px 0px 0px 6.82353px;
-    font-weight: bold;
     border: 1px solid #e5e5e5;
     font-family: "Lato", sans-serif;
     font-size: 11px;
@@ -1187,7 +1155,6 @@ html {
   }
   .hdr-p {
     font-size: 8px;
-    font-weight: bold;
     font-family: "Lato", sans-serif;
   }
   .rsnd-btn {
@@ -1200,7 +1167,6 @@ html {
     border-radius: 0px 6.82353px 6.82353px 0px;
     background-color: #ffffff;
     color: #cb9395;
-    font-weight: bold;
     border: 1px solid #e5e5e5;
     font-family: "Lato", sans-serif;
     font-size: 11px;
@@ -1210,8 +1176,7 @@ html {
   }
   .rsnd-btn p:nth-child(2) {
     color: #000000;
-    font-size: 11px;
-    font-weight: bold;
+    font-size: 10px;
     font-family: "Lato", sans-serif;
   }
   .tmr {
@@ -1287,7 +1252,6 @@ html {
     color: #808080;
     font-size: 14px;
     align-items: center;
-    font-weight: bold;
     font-family: "Lato", sans-serif;
   }
   .sub-container2-amt {
@@ -1407,7 +1371,6 @@ html {
     font-size: 11px;
     line-height: 12px;
     font-family: "Lato", sans-serif;
-    font-weight: bold;
   }
   .inner-mbl-sub-container2 {
     padding: 19px;
@@ -1431,13 +1394,11 @@ html {
   .exp-tim {
     font-size: 13px;
     font-family: "Lato", sans-serif;
-    font-weight: bold;
   }
   .ft-p {
     font-family: "Lato", sans-serif;
     color: #cb9395;
     font-size: 12px;
-    font-weight: bold;
   }
   .container {
     display: flex;
@@ -1452,7 +1413,6 @@ html {
     margin: 20px 0px 0px 0px;
   }
   .hdr-cont {
-    font-weight: bold;
     line-height: 14px;
     font-family: "Lato", sans-serif;
     font-size: 14px;
@@ -1464,7 +1424,6 @@ html {
     letter-spacing: 9px;
     text-align: center;
     border-radius: 6.82353px 0px 0px 6.82353px;
-    font-weight: bold;
     border: 1px solid #e5e5e5;
     font-family: "Lato", sans-serif;
     font-size: 17px;
@@ -1480,7 +1439,6 @@ html {
     letter-spacing: 1px;
   }
   .hdr-p {
-    font-weight: bold;
     line-height: 17px;
     font-family: "Lato", sans-serif;
     font-size: 11px;
@@ -1495,7 +1453,6 @@ html {
     border-radius: 0px 6.82353px 6.82353px 0px;
     background-color: #ffffff;
     color: #cb9395;
-    font-weight: bold;
     border: 1px solid #e5e5e5;
     font-family: "Lato", sans-serif;
     font-size: 14px;
@@ -1505,8 +1462,7 @@ html {
   }
   .rsnd-btn p:nth-child(2) {
     color: #000000;
-    font-size: 13px;
-    font-weight: bold;
+    font-size: 11px;
     font-family: "Lato", sans-serif;
   }
   .tmr {
@@ -1603,7 +1559,6 @@ html {
     font-size: 12px;
     flex-flow: row-reverse wrap;
     align-items: center;
-    font-weight: bold;
     font-family: "Lato", sans-serif;
   }
   .sub-container2-amt {
