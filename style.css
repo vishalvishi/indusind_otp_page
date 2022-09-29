@@ -575,7 +575,6 @@ html {
   .sub-container2-mercht {
     color: #000000;
     font-size: 14px;
-    font-weight: bold;
     font-family: "Lato", sans-serif;
   }
   .sub-container2-pgh {
@@ -878,7 +877,6 @@ html {
     color: #000000;
     text-align: end;
     font-size: 12px;
-    font-weight: bold;
     font-family: "Lato", sans-serif;
   }
   .sub-container2-pgh {
@@ -1209,7 +1207,6 @@ html {
   .sub-container2-mercht {
     color: #000000;
     font-size: 14px;
-    font-weight: bold;
     font-family: "Lato", sans-serif;
   }
   .sub-container2-pgh {
@@ -1289,7 +1286,7 @@ html {
     align-items: center;
   }
 }
-@media only screen and (min-width: 600px) and (min-height: 449px) {
+@media only screen and (min-width: 600px) and (min-height: 100px) {
   .main-error {
     position: relative;
     display: flex;
