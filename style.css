@@ -7,7 +7,38 @@ html {
   padding: 0;
   overflow: hidden;
 }
-
+.parent-container {
+  position: relative;
+}
+.model-pad {
+  padding: 0px 15px 15px 15px;
+  height: 88%;
+  overflow-y: auto;
+}
+.cls-btn {
+  background-color: #f1f3f4;
+  height: 34px;
+  justify-content: end;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+.cls-btn img {
+  margin-right: 13px;
+}
+.model {
+  display: none;
+  z-index: 10000;
+  background-color: #f9f9f9;
+  position: absolute;
+  max-width: 579px;
+  top: 15px;
+  border-radius: 5px;
+  margin: 0 auto;
+  box-shadow: 8px 11px 13px 0px #efefef;
+  height: 80vh;
+}
 @media only screen and (max-width: 299px) {
   .main-error {
     position: relative;
@@ -19,7 +50,7 @@ html {
     gap: 4px;
     align-items: center;
     position: absolute;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: bold;
   }
   .main-footer {
@@ -78,7 +109,7 @@ html {
     margin-bottom: 1px;
     font-size: 8px;
     color: #808080;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     justify-content: center;
     gap: 7px;
     align-items: center;
@@ -89,7 +120,7 @@ html {
     border-top: 2px solid #8080804a;
     background-color: #f1f1f1;
     font-size: 8px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .ref-ecom {
     border: 1px solid #f1f1f1;
@@ -125,7 +156,7 @@ html {
     color: #000000;
     font-size: 8px;
     height: 19px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -146,10 +177,10 @@ html {
   }
   .exp-tim {
     font-size: 8px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .ft-p {
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     color: #cb9395;
     font-size: 9px;
     margin: 0px;
@@ -167,7 +198,7 @@ html {
   }
   .hdr-cont {
     margin-top: 1px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 8px;
   }
   .inpt {
@@ -178,22 +209,22 @@ html {
     text-align: center;
     border-radius: 6.82353px 0px 0px 6.82353px;
     border: 1px solid #e5e5e5;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 9px;
   }
   .inpt::-webkit-input-placeholder {
     font-size: 8px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     letter-spacing: 1px;
   }
   .inpt:-moz-placeholder {
     font-size: 8px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     letter-spacing: 1px;
   }
   .hdr-p {
     font-size: 7px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .rsnd-btn {
     width: 40%;
@@ -206,8 +237,12 @@ html {
     background-color: #ffffff;
     color: #cb9395;
     border: 1px solid #e5e5e5;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 8px;
+  }
+  .rsnd-btn a:link {
+    text-decoration: none;
+    color: #cb9395;
   }
   .rsnd-btn p {
     margin: 0px;
@@ -215,7 +250,7 @@ html {
   .rsnd-btn p:nth-child(2) {
     color: #000000;
     font-size: 8px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .tmr {
     color: #98272a;
@@ -231,7 +266,7 @@ html {
     background-color: #cb9395;
     height: 27px;
     font-weight: bold;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 10px;
     margin: 30px 0px auto;
   }
@@ -257,14 +292,14 @@ html {
     color: #000000;
     font-size: 14px;
     font-weight: bold;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .sub-container2-pgh {
     color: #808080;
     font-size: 17px;
     margin-top: 0px;
     height: 34px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .cpy-rigt {
     margin-top: -13px;
@@ -280,7 +315,7 @@ html {
     font-size: 11px;
     color: #808080;
     align-items: center;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .sub-container2-ntk {
     display: flex;
@@ -289,7 +324,7 @@ html {
     color: #808080;
     font-size: 14px;
     align-items: center;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .sub-container2-amt {
     color: #000000;
@@ -298,7 +333,7 @@ html {
     height: 36px;
     align-items: center;
     font-weight: bold;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .parent-container {
     height: 100vh;
@@ -347,7 +382,7 @@ html {
     gap: 4px;
     align-items: center;
     position: absolute;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: bold;
   }
   .main-footer {
@@ -405,7 +440,7 @@ html {
     margin-bottom: 1px;
     font-size: 10px;
     color: #808080;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     justify-content: center;
     gap: 7px;
     align-items: center;
@@ -416,7 +451,7 @@ html {
     border-top: 2px solid #8080804a;
     background-color: #f1f1f1;
     font-size: 9px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .ref-ecom {
     border: 1px solid #f1f1f1;
@@ -445,7 +480,7 @@ html {
     color: #000000;
     font-size: 10px;
     height: 24px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -466,10 +501,10 @@ html {
   }
   .exp-tim {
     font-size: 10px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .ft-p {
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     color: #cb9395;
     font-size: 10px;
   }
@@ -486,7 +521,7 @@ html {
   }
   .hdr-cont {
     margin-top: 1px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 10px;
   }
   .inpt {
@@ -497,22 +532,22 @@ html {
     text-align: center;
     border-radius: 6.82353px 0px 0px 6.82353px;
     border: 1px solid #e5e5e5;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 17px;
   }
   .inpt::-webkit-input-placeholder {
     font-size: 10px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     letter-spacing: 1px;
   }
   .inpt:-moz-placeholder {
     font-size: 10px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     letter-spacing: 1px;
   }
   .hdr-p {
     font-size: 9px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .rsnd-btn {
     width: 40%;
@@ -525,8 +560,12 @@ html {
     background-color: #ffffff;
     color: #cb9395;
     border: 1px solid #e5e5e5;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 10px;
+  }
+  .rsnd-btn a:link {
+    text-decoration: none;
+    color: #cb9395;
   }
   .rsnd-btn p {
     margin: 0px;
@@ -534,7 +573,7 @@ html {
   .rsnd-btn p:nth-child(2) {
     color: #000000;
     font-size: 9px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .tmr {
     color: #98272a;
@@ -550,7 +589,7 @@ html {
     background-color: #cb9395;
     height: 32px;
     font-weight: bold;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 10px;
     margin: 30px 0px auto;
   }
@@ -575,14 +614,14 @@ html {
   .sub-container2-mercht {
     color: #000000;
     font-size: 14px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .sub-container2-pgh {
     color: #808080;
     font-size: 17px;
     margin-top: 0px;
     height: 34px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .cpy-rigt {
     margin-top: -13px;
@@ -598,7 +637,7 @@ html {
     font-size: 11px;
     color: #808080;
     align-items: center;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .sub-container2-ntk {
     display: flex;
@@ -607,7 +646,7 @@ html {
     color: #808080;
     font-size: 14px;
     align-items: center;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .sub-container2-amt {
     color: #000000;
@@ -616,7 +655,7 @@ html {
     height: 36px;
     align-items: center;
     font-weight: bold;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .parent-container {
     flex-direction: column;
@@ -654,7 +693,7 @@ html {
     align-items: center;
   }
 }
-@media only screen and (min-width: 600px) and (max-width: 1500px) {
+@media only screen and (min-width: 600px) and (max-width: 1900px) {
   .main-error {
     position: relative;
     display: flex;
@@ -665,7 +704,7 @@ html {
     gap: 4px;
     align-items: center;
     position: absolute;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: bold;
   }
   .main-footer {
@@ -724,7 +763,7 @@ html {
     background-color: #f1f1f1;
     font-size: 10px;
     line-height: 12px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .inner-mbl-sub-container2 {
     padding: 19px;
@@ -747,10 +786,10 @@ html {
   }
   .exp-tim {
     font-size: 11px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .ft-p {
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     color: #cb9395;
     font-size: 10px;
   }
@@ -768,7 +807,7 @@ html {
   }
   .hdr-cont {
     line-height: 14px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 10px;
   }
   .inpt {
@@ -779,22 +818,22 @@ html {
     text-align: center;
     border-radius: 6.82353px 0px 0px 6.82353px;
     border: 1px solid #e5e5e5;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 17px;
   }
   .inpt::-webkit-input-placeholder {
     font-size: 11px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     letter-spacing: 1px;
   }
   .inpt:-moz-placeholder {
     font-size: 11px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     letter-spacing: 1px;
   }
   .hdr-p {
     line-height: 17px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 10px;
   }
   .rsnd-btn {
@@ -808,8 +847,12 @@ html {
     background-color: #ffffff;
     color: #cb9395;
     border: 1px solid #e5e5e5;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 11px;
+  }
+  .rsnd-btn a:link {
+    text-decoration: none;
+    color: #cb9395;
   }
   .rsnd-btn p {
     margin: 0px;
@@ -817,7 +860,7 @@ html {
   .rsnd-btn p:nth-child(2) {
     color: #000000;
     font-size: 10px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .tmr {
     color: #98272a;
@@ -833,7 +876,7 @@ html {
     background-color: #cb9395;
     height: 35px;
     font-weight: bold;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 12px;
     margin: 34px auto 0px auto;
   }
@@ -877,7 +920,7 @@ html {
     color: #000000;
     text-align: end;
     font-size: 12px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .sub-container2-pgh {
     color: #808080;
@@ -885,7 +928,7 @@ html {
     text-align: end;
     margin-top: 0px;
     height: 17px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .cpy-rigt {
     margin-top: -13px;
@@ -901,7 +944,7 @@ html {
     font-size: 10px;
     color: #808080;
     align-items: center;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .sub-container2-ntk {
     display: flex;
@@ -911,7 +954,7 @@ html {
     font-size: 12px;
     flex-flow: row-reverse wrap;
     align-items: center;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .sub-container2-amt {
     color: #000000;
@@ -921,7 +964,7 @@ html {
     height: 36px;
     align-items: center;
     font-weight: bold;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .parent-container {
     flex-direction: column;
@@ -970,7 +1013,7 @@ html {
     gap: 4px;
     align-items: center;
     position: absolute;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: bold;
   }
   .main-footer {
@@ -1029,7 +1072,7 @@ html {
     margin-bottom: 1px;
     font-size: 10px;
     color: #808080;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     justify-content: center;
     gap: 7px;
     align-items: center;
@@ -1040,7 +1083,7 @@ html {
     border-top: 2px solid #8080804a;
     background-color: #f1f1f1;
     font-size: 8px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .ref-ecom {
     border: 1px solid #f1f1f1;
@@ -1076,7 +1119,7 @@ html {
     color: #000000;
     font-size: 10px;
     height: 19px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1097,10 +1140,10 @@ html {
   }
   .exp-tim {
     font-size: 10px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .ft-p {
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     color: #cb9395;
     font-size: 10px;
     margin: 0px;
@@ -1118,7 +1161,7 @@ html {
   }
   .hdr-cont {
     margin-top: 1px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 11px;
   }
   .inpt {
@@ -1129,22 +1172,22 @@ html {
     text-align: center;
     border-radius: 6.82353px 0px 0px 6.82353px;
     border: 1px solid #e5e5e5;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 11px;
   }
   .inpt::-webkit-input-placeholder {
     font-size: 11px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     letter-spacing: 1px;
   }
   .inpt:-moz-placeholder {
     font-size: 11px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     letter-spacing: 1px;
   }
   .hdr-p {
     font-size: 8px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .rsnd-btn {
     width: 40%;
@@ -1157,8 +1200,12 @@ html {
     background-color: #ffffff;
     color: #cb9395;
     border: 1px solid #e5e5e5;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 11px;
+  }
+  .rsnd-btn a:link {
+    text-decoration: none;
+    color: #cb9395;
   }
   .rsnd-btn p {
     margin: 0px;
@@ -1166,7 +1213,7 @@ html {
   .rsnd-btn p:nth-child(2) {
     color: #000000;
     font-size: 10px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .tmr {
     color: #98272a;
@@ -1182,7 +1229,7 @@ html {
     background-color: #cb9395;
     height: 37px;
     font-weight: bold;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 13px;
     margin: 39px 0px auto;
   }
@@ -1207,14 +1254,14 @@ html {
   .sub-container2-mercht {
     color: #000000;
     font-size: 14px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .sub-container2-pgh {
     color: #808080;
     font-size: 17px;
     margin-top: 0px;
     height: 34px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .cpy-rigt {
     margin-top: -13px;
@@ -1230,7 +1277,7 @@ html {
     font-size: 11px;
     color: #808080;
     align-items: center;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .sub-container2-ntk {
     display: flex;
@@ -1239,7 +1286,7 @@ html {
     color: #808080;
     font-size: 14px;
     align-items: center;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .sub-container2-amt {
     color: #000000;
@@ -1248,7 +1295,7 @@ html {
     height: 36px;
     align-items: center;
     font-weight: bold;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .parent-container {
     height: 100vh;
@@ -1298,7 +1345,7 @@ html {
     text-align: center;
     align-items: center;
     position: absolute;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: bold;
   }
   .main-footer {
@@ -1357,7 +1404,7 @@ html {
     background-color: #f1f1f1;
     font-size: 11px;
     line-height: 12px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .inner-mbl-sub-container2 {
     padding: 19px;
@@ -1380,10 +1427,10 @@ html {
   }
   .exp-tim {
     font-size: 13px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .ft-p {
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     color: #cb9395;
     font-size: 12px;
   }
@@ -1401,7 +1448,7 @@ html {
   }
   .hdr-cont {
     line-height: 14px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 14px;
   }
   .inpt {
@@ -1412,22 +1459,22 @@ html {
     text-align: center;
     border-radius: 6.82353px 0px 0px 6.82353px;
     border: 1px solid #e5e5e5;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 17px;
   }
   .inpt::-webkit-input-placeholder {
     font-size: 15px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     letter-spacing: 1px;
   }
   .inpt:-moz-placeholder {
     font-size: 15px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     letter-spacing: 1px;
   }
   .hdr-p {
     line-height: 17px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 11px;
   }
   .rsnd-btn {
@@ -1441,8 +1488,12 @@ html {
     background-color: #ffffff;
     color: #cb9395;
     border: 1px solid #e5e5e5;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 14px;
+  }
+  .rsnd-btn a:link {
+    text-decoration: none;
+    color: #cb9395;
   }
   .rsnd-btn p {
     margin: 0px;
@@ -1450,7 +1501,7 @@ html {
   .rsnd-btn p:nth-child(2) {
     color: #000000;
     font-size: 11px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .tmr {
     color: #98272a;
@@ -1466,7 +1517,7 @@ html {
     background-color: #cb9395;
     height: 50px;
     font-weight: bold;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 14px;
     margin: 55px auto 0px auto;
   }
@@ -1511,7 +1562,7 @@ html {
     text-align: end;
     font-size: 15px;
     font-weight: bold;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .sub-container2-pgh {
     color: #808080;
@@ -1519,7 +1570,7 @@ html {
     text-align: end;
     margin-top: 0px;
     height: 17px;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .cpy-rigt {
     margin-top: -13px;
@@ -1535,7 +1586,7 @@ html {
     font-size: 10px;
     color: #808080;
     align-items: center;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .sub-container2-ntk {
     display: flex;
@@ -1545,7 +1596,7 @@ html {
     font-size: 12px;
     flex-flow: row-reverse wrap;
     align-items: center;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .sub-container2-amt {
     color: #000000;
@@ -1555,7 +1606,7 @@ html {
     height: 36px;
     align-items: center;
     font-weight: bold;
-    font-family: "Lato", sans-serif;
+    font-family: "Roboto", sans-serif;
   }
   .parent-container {
     flex-direction: column;
