@@ -15,7 +15,6 @@ html {
   height: 88%;
   overflow-y: auto;
 }
-/* width */
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -56,12 +55,71 @@ html {
   border-radius: 5px;
   margin: 0 auto;
   box-shadow: 8px 11px 13px 0px #efefef;
+  height: 39vh;
+}
+.model-cfrm {
+  padding: 77px;
+  font-size: 8px;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  justify-content: space-around;
+  z-index: 10000;
+  background-color: #f9f9f9;
+  position: absolute;
+  min-width: 356px;
+  top: 15px;
+  border-radius: 5px;
+  margin: 0 auto;
   height: 67vh;
+}
+
+.back-drop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: none;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.239);
+  z-index: 9999;
+}
+.model-cfrm-1 {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.acpt {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  background-color: #98272a;
+  padding: 7px 30px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: sans-serif;
+}
+.rjt {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  background-color: #cb9395;
+  padding: 7px 30px;
+  border-radius: 4px;
+  font-family: sans-serif;
 }
 @media only screen and (max-width: 299px) {
   .model {
     top: 48px;
     height: 67vh;
+    font-size: 8px;
+  }
+  .model-cfrm {
+    top: auto;
+    height: 39vh;
   }
   .main-error {
     position: relative;
@@ -235,12 +293,36 @@ html {
     font-family: "Roboto", sans-serif;
     font-size: 9px;
   }
-  .inpt::-webkit-input-placeholder {
+  /* .inpt::-webkit-input-placeholder {
     font-size: 8px;
     font-family: "Roboto", sans-serif;
     letter-spacing: 1px;
   }
   .inpt:-moz-placeholder {
+    font-size: 8px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+  } */
+
+  .inpt::-webkit-input-placeholder {
+    font-size: 8px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+  }
+
+  .inpt:-ms-input-placeholder {
+    font-size: 8px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+  }
+
+  .inpt:-moz-placeholder {
+    font-size: 8px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+  }
+
+  .inpt::-moz-placeholder {
     font-size: 8px;
     font-family: "Roboto", sans-serif;
     letter-spacing: 1px;
@@ -395,6 +477,11 @@ html {
   }
 }
 @media only screen and (min-width: 300px) and (max-width: 599px) {
+  .model-cfrm {
+    top: auto;
+    height: 39vh;
+    font-size: 9px;
+  }
   .model {
     top: 28px;
     height: 67vh;
@@ -562,12 +649,35 @@ html {
     font-family: "Roboto", sans-serif;
     font-size: 17px;
   }
-  .inpt::-webkit-input-placeholder {
+  /* .inpt::-webkit-input-placeholder {
     font-size: 10px;
     font-family: "Roboto", sans-serif;
     letter-spacing: 1px;
   }
   .inpt:-moz-placeholder {
+    font-size: 10px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+  } */
+  .inpt::-webkit-input-placeholder {
+    font-size: 10px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+  }
+
+  .inpt:-ms-input-placeholder {
+    font-size: 10px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+  }
+
+  .inpt:-moz-placeholder {
+    font-size: 10px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+  }
+
+  .inpt::-moz-placeholder {
     font-size: 10px;
     font-family: "Roboto", sans-serif;
     letter-spacing: 1px;
@@ -721,6 +831,11 @@ html {
   }
 }
 @media only screen and (min-width: 600px) and (max-width: 1900px) {
+  .model-cfrm {
+    top: auto;
+    height: 39vh;
+    font-size: 10px;
+  }
   .model {
     top: 39px;
     height: 67vh;
@@ -852,12 +967,26 @@ html {
     font-family: "Roboto", sans-serif;
     font-size: 17px;
   }
+
   .inpt::-webkit-input-placeholder {
     font-size: 11px;
     font-family: "Roboto", sans-serif;
     letter-spacing: 1px;
   }
+
+  .inpt:-ms-input-placeholder {
+    font-size: 11px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+  }
+
   .inpt:-moz-placeholder {
+    font-size: 11px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+  }
+
+  .inpt::-moz-placeholder {
     font-size: 11px;
     font-family: "Roboto", sans-serif;
     letter-spacing: 1px;
@@ -1034,6 +1163,11 @@ html {
   }
 }
 @media only screen and (max-width: 600px) and (min-height: 450px) {
+  .model-cfrm {
+    top: auto;
+    height: 39vh;
+    font-size: 10px;
+  }
   .model {
     top: 44px;
     height: 67vh;
@@ -1210,12 +1344,35 @@ html {
     font-family: "Roboto", sans-serif;
     font-size: 11px;
   }
-  .inpt::-webkit-input-placeholder {
+  /* .inpt::-webkit-input-placeholder {
     font-size: 11px;
     font-family: "Roboto", sans-serif;
     letter-spacing: 1px;
   }
   .inpt:-moz-placeholder {
+    font-size: 11px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+  } */
+  .inpt::-webkit-input-placeholder {
+    font-size: 11px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+  }
+
+  .inpt:-ms-input-placeholder {
+    font-size: 11px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+  }
+
+  .inpt:-moz-placeholder {
+    font-size: 11px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+  }
+
+  .inpt::-moz-placeholder {
     font-size: 11px;
     font-family: "Roboto", sans-serif;
     letter-spacing: 1px;
@@ -1369,6 +1526,11 @@ html {
   }
 }
 @media only screen and (min-width: 600px) and (min-height: 449px) {
+  .model-cfrm {
+    top: auto;
+    height: 39vh;
+    font-size: 12px;
+  }
   .model {
     top: 51px;
     height: 67vh;
@@ -1501,12 +1663,35 @@ html {
     font-family: "Roboto", sans-serif;
     font-size: 17px;
   }
-  .inpt::-webkit-input-placeholder {
+  /* .inpt::-webkit-input-placeholder {
     font-size: 15px;
     font-family: "Roboto", sans-serif;
     letter-spacing: 1px;
   }
   .inpt:-moz-placeholder {
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+  } */
+  .inpt::-webkit-input-placeholder {
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+  }
+
+  .inpt:-ms-input-placeholder {
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+  }
+
+  .inpt:-moz-placeholder {
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+  }
+
+  .inpt::-moz-placeholder {
     font-size: 15px;
     font-family: "Roboto", sans-serif;
     letter-spacing: 1px;
