@@ -14,7 +14,7 @@
       <div class="parent-container1">
         <header class="container">
           <img class="logo2" src="./indusind_logo.png" />
-          <img class="logo1" src="./visa_logo.svg" />
+          <img class="logo1" src="./master.png" />
         </header>
         <div class="main-container1">
           <div class="sub-container1">
@@ -154,7 +154,11 @@
               <span onclick="modelOpenHelp();">Help</span>
             </p>
           </div>
-          <div><p class="ft-p">Cancel Payment</p></div>
+          <div>
+            <p class="ft-p" style="cursor: pointer" onclick="modelCfrmOpen();">
+              Cancel Payment
+            </p>
+          </div>
         </footer>
       </div>
       <div class="model">
@@ -166,6 +170,16 @@
           /></a>
         </div>
         <div class="model-pad"></div>
+      </div>
+      <div class="back-drop"></div>
+      <div class="model-cfrm">
+        <div><p>Are you sure you want to cancel payment</p></div>
+        <div>
+          <div class="model-cfrm-1">
+            <p class="acpt">Yes</p>
+            <p class="rjt" onclick="closeCfmModel();">No</p>
+          </div>
+        </div>
       </div>
     </div>
     <div class="main-footer">
@@ -193,39 +207,375 @@
       function modelOpenHelp() {
         document.getElementsByClassName("model")[0].style.display = "block";
 
-        document.getElementsByClassName("model-pad")[0].innerHTML = `    <div
-      style="
-        font-family: Trebuchet MS;
-        font-weight: 600;
-        font-size: 70%;
-        line-height: 17px;
-        height: 100%;
-      "
-    >
-      <ol>
-        <li>What is OTP?</li>
-        <p>
-          OTP is a One-Time Password which is randomly generated and sent to
-          your registered mobile number for validation of the transaction. This
-          is to provide enhanced level of security on card transactions. The OTP
-          will be sent to your registered mobile number within 1 minutes.
-        </p>
-        <li>What is registered mobile number?</li>
-        <p>
-          The registered mobile number is a contact number which you have
-          registered with your Verified by Visa Card Issuer.
-        </p>
-        <p>
-          If you have not registered your Verified by Visa Card please do so by
-          calling Indusind Bank customer support.
-        </p>
-        <li>For how long OTP will be valid?</li>
-        <p>
-          The OTP will be valid for 10 minutes once the cardholders request the
-          OTP
-        </p>
-      </ol>
-    </div>`;
+        document.getElementsByClassName("model-pad")[0].innerHTML = `<div
+style="
+  font-family: Trebuchet MS;
+  font-weight: 600;
+  font-size: 60%;
+  line-height: 17px;
+  height: 100%;
+"
+>
+<p><h3 style="
+  text-align: center;
+  text-decoration: underline;
+  font-weight: bold;
+">TERMS AND CONDITIONS</h3></p>
+<ul style="
+list-style: none;
+"><li><p>
+  Welcome to the IndusInd Bank Verified by Visa authentication service
+  ("VbV Service"). Please read these Terms and Conditions carefully before
+  using the VbV Service.
+</p></li></ul>
+<ol>
+  <li><h3>DEFINITIONS:</h3></li>
+  <p>
+    In this document the following words and phrases have the meaning set
+    opposite them unless the context indicates otherwise:
+  </p>
+  <p>
+    "Bank" refers to IndusInd Bank Limited, a banking company incorporated
+    in India under the Companies Act, 1956 and having its registered
+    office at 2401 Gen. Thimmayya Road (Cantonment), Pune - 411 001,
+    Maharashtra, India and Corporate office at 8th Floor, Tower 1, One
+    Indiabulls Centre, 841, Senapati Bapat Marg, Elphinstone Road (W)
+    Mumbai - 400 013 and including any branch / office thereof. The term
+    includes the successors and assigns of the IndusInd Bank Limited.
+  </p>
+  <p>
+    Card" shall mean IndusInd Bank Visa Debit Card issued by the Bank to
+    the Card Holder.
+  </p>
+  <p>
+    "Card Holder "means any person holding a valid IndusInd Bank Visa
+    Debit Card issued by the Bank and who is desirous of effecting
+    payments to the Merchant using his/ her Card through the Internet.
+  </p>
+  <p>
+    "Merchant" means any person who owns or manages or operates the
+    Merchant Establishment through a website and accepts online payment
+    made by the Card Holder using the Card for the product and/or service
+    purchased through the Merchant's website.
+  </p>
+  <p>
+    "Password" means the personal identification password created by the
+    Card Holder in relation to the Debit Card and as approved by the Bank
+    from time to time for the purpose of authenticating the Card Holder
+    while effecting online payment using the Debit Card.
+  </p>
+  <p>
+    "Service" means the Verified by Visa Authentication Service offered by
+    the Bank for the purpose of authenticating the Card Holder to effect
+    online payments through the use of his / her Debit Card.
+  </p>
+  <p>
+    "User ID" means the Debit Card number furnished to the Card Holder by
+    the Bank to enable Card Holder to make Debit Card payments through the
+    Internet using the Debit Card.
+  </p>
+  <p>
+    "Website" means the website of the Bank located at the URL
+    <a href="https://www.indusind.com">https://www.indusind.com.</a>
+  </p>
+  <li>
+    <h3>ACCEPTANCE OF TERMS:</h3>
+  </li>
+  <p>
+    The VbV service shall be provided to the Card Holder, subject to the
+    following Terms and Conditions ("Terms") and the Cardholder Agreement
+    governing the card transactions for which the VbV service is and / or
+    to be used. The Terms may be updated by the Bank from time to time
+    without notice to the Card Holder. Creation of a Verified by Visa
+    account password and use of the VbV Service constitutes the acceptance
+    of the terms. In addition, when using the VbV service, the Card Holder
+    shall be subject to any amendments, modifications, revisions,
+    additional guidelines or rules applicable to the VbV service that may
+    be posted from time to time at the Bank's web site. The Card Holder
+    shall be responsible for regularly reviewing these Terms and the
+    additional terms and conditions stipulated by the Bank including
+    amendments thereto as may be posted on the Website. Continued use of
+    the VbV service after such amendments and / or revisions, issuance of
+    additional guidelines and / or rules to these Terms shall constitute
+    the Card Holder's acceptance to such revised terms and any relevant
+    guidelines or rules so posted.
+  </p>
+  <p>
+    Notwithstanding anything contained herein, these terms are in addition
+    and not in derogation of the terms and conditions as stipulated by the
+    Bank with regard to the Debit Card and/or to any services/facilities
+    so offered. However, in the event of a conflict with any other terms
+    and conditions of the Bank and the Terms herein, the Terms shall have
+    an overriding effect.
+  </p>
+  <p>
+    The Bank reserves the right at any time and from time to time to
+    modify or discontinue, temporarily or permanently, the VbV service (or
+    any part thereof) with or without notice.
+  </p>
+  <li>
+    <h3>SERVICE:</h3>
+  </li>
+  <p>
+    VbV Service provides the Card Holder with a way of increasing security
+    in online and other transactions for which VbV Service is used, by
+    reducing the chances of fraud for those transactions. Registering for
+    VbV Service involves providing personal information to the Bank, which
+    is then used to confirm Card Holder identity in connection with future
+    online transactions or other transactions for which VbV Service is
+    used.
+  </p>
+  <p>
+    Registering for the VbV Service entails the Card Holder departing with
+    his or her personal information and Debit Card details to the Bank. It
+    is hereby understood and informed that such personal information and
+    Debit Card Details may be used for various purposes to effectuate and
+    operationalise the VbV service for the Card Holder such as amongst
+    others, confirmation of the Card Holder's identity in respect of all
+    the transactions, for record retention and reporting, as well as to
+    enable and / or assist the Bank in any transaction related dispute
+    resolution.
+  </p>
+  <p>
+    The Bank shall thereafter validate the Debit Card and personal details
+    provided by the Card Holder to enable the latter to create the
+    Password. In the event any of the personal or Debit Card details of
+    the Card Holder is not as per the records available with the Bank, the
+    Bank shall at its sole discretion reject the creation of the Password
+    by the Card Holder and the Card Holder shall be required to update his
+    personal and Debit Card details with the Bank in the manner prescribed
+    by the Bank. The Debit Card number shall be the User ID for the
+    purposes of authentication of the Card Holder
+  </p>
+  <p>
+    On successful creation of the Password by the Card Holder, the Bank
+    shall communicate to the Card Holder in this regard and in a manner as
+    shall be decided by the Bank at its sole discretion
+  </p>
+  <p>
+    The Card Holder agrees to promptly update such information and Debit
+    Card Details to keep it true, accurate, current and complete. The Bank
+    has the right to suspend, terminate, or refuse the Card Holder's
+    current or future use of the VbV Service or the Card Holder's Debit
+    Card account, if at any point of time the Bank discovers or has
+    reasonable grounds to hold that that information so provided by the
+    Card Holder is untrue, inaccurate, not current or incomplete.
+  </p>
+  <p>
+    The Card Holder must have the resources, amongst others the necessary
+    equipment including a computer and modem or other access device to
+    access the World Wide Web for using the VbV service and must pay any
+    service fees pertaining to such access.
+  </p>
+  <li>
+    <h3>CONFIDENTIALITY OF INFORMATION:</h3>
+  </li>
+  <p>
+    Personal Information will not be shared with online retail merchants
+    or merchants in other transactions for which the VbV Service is used,
+    however any information of the Card Holder so furnished to the Bank,
+    for the purposes of the VbV service may be disclosed if required to do
+    so by applicable laws and / or statutory authorities, in the good
+    faith and belief that such preservation or disclosure is permitted by
+    applicable Law, or as reasonably necessary to (i) comply with legal
+    process or (ii) enforce these Terms.
+  </p>
+  <li>
+    <h3>LIABILITY:</h3>
+  </li>
+  <p>
+    Under no circumstances will the Bank be liable for any direct,
+    consequential, incidental, special or indirect losses or other
+    damages, such as any damage to the Card Holder's computer or telephone
+    service resulting from the Card Holder's use of the VbV Service. The
+    Bank assumes no responsibility for, and will not be liable for, any
+    damages to, or any viruses which may affect, the Card Holder's
+    computer equipment or other property on account of his or her access
+    to, use of the VbV Service. The Bank does not guarantee to the Card
+    Holder that the VbV Service would be virus free.
+  </p>
+  <li>
+    <h3>TERMINATION:</h3>
+  </li>
+  <p>
+    If the Card Holder no longer desires to use the VbV Service, Card
+    Holder will be required to call the Bank's Customer Care Centre for
+    the Password and Registration Data with Verified by Visa to be
+    deactivated. Any purchases made by the Card Holder using the VbV
+    Service prior to deactivation will not be affected.
+  </p>
+  <p>
+    The Bank reserves discretion to temporarily or permanently deactivate
+    and / or terminate the Card Holder's ability to use the VbV Service
+    without assigning any reasons whatsoever.
+  </p>
+  <li>
+    <h3>RELATIONSHIP WITH MERCHANTS:</h3>
+  </li>
+  <p>
+    The Card Holder's communications or business dealings with, or
+    participation in promotions of, schemes of, online retail or other
+    merchants on or through the VbV Service, including payment and
+    delivery of related goods or services, and any other terms,
+    conditions, warranties or representations associated with such
+    dealings, are exclusively between the Card Holder and such merchant.
+    The Bank shall not be responsible or liable for any loss or damage of
+    any sort incurred as the result of any such dealings. By virtue of
+    offering the VbV service, the Bank does not in any manner recommend or
+    endorse any merchant or certify the quality of the products and / or
+    services so offered, regardless of whether the merchant participates
+    in Verified by Visa.
+  </p>
+  <li>
+    <h3>DISCLAIMER OF WARRANTIES:</h3>
+  </li>
+  <p>
+    The Card Holder understands and expressly agrees that use of the
+    Website is at his / her entire risk. The Website is provided on an "as
+    is" and "as available" basis. Except as warranted in the Terms herein,
+    the Bank expressly disclaims all warranties of any kind, whether
+    express or implied or statutory, including, but not limited to the
+    implied warranties of merchantability, fitness for a particular
+    purpose, data accuracy and completeness, and any warranties relating
+    to non-infringement in the VbV Service provided by the Bank.
+  </p>
+  <p>
+    The Bank does not warrant that access to the Website and VbV Service
+    shall be uninterrupted, timely, secure, or error free nor does it make
+    any warranty as to the results that may be obtained from the Website
+    or use, accuracy or reliability of the Service.
+  </p>
+  <li>
+    <h3>CHARGES:</h3>
+  </li>
+  <p>
+    The Bank reserves the right to charge and recover from the Card
+    Holder, service charges / other applicable charges for providing the
+    VbV Service. The Card Holder hereby authorizes the Bank to recover the
+    service charges by debiting the account linked to the Card of the Card
+    Holder.
+  </p>
+  <li>
+    <h3>NOTICES:</h3>
+  </li>
+  <p>
+    Notices to the Card Holder in respect of the VbV Service may be made
+    either via email or regular mail to the address that the Card Holder
+    has provided to the Bank in connection with the Card Holder's accounts
+    with the Bank or his / her Debit card issued by the Bank.
+  </p>
+  <li>
+    <h3>GENERAL TERMS:</h3>
+  </li>
+  <p>
+    The Card Holder represents being of sufficient legal age to use the
+    VbV Service and to create binding legal obligations for any liability,
+    the Card Holder may incur arising on account of the usage of the VbV
+    Service. The Card Holder shall be fully responsible for all uses of
+    the VbV Service and shall ensure adherence to all applicable laws
+    while using this service.
+  </p>
+  <p>
+    The Card Holder acknowledges, represents and warrants that the Card
+    Holder is the sole and exclusive owner and is the only authorised user
+    of the Password and accepts sole responsibility for use,
+    confidentiality and protection of the Password.
+  </p>
+  <p>
+    The Card Holder grants express authority to the Bank for carrying out
+    transactions and instructions authenticated by such Password. The Card
+    Holder unconditionally and irrevocably undertakes to have the Password
+    of such number of characters as may be notified by the Bank from time
+    to time and ensure that the same is kept confidential; and to not let
+    any other unauthorized person have access to the Password while the
+    Card Holder is purchasing the products and/or services from the
+    Merchant's website. If the Card Holder forgets the Password, then the
+    Card Holder may request for the issue of a new Password in the manner
+    as required by the Bank from time to time and this shall not be
+    construed as the commencement of a new contract. The Card Holder
+    agrees and acknowledges that the Bank shall in no way be held
+    responsible or liable if the Card Holder incurs any loss as a result
+    of information being disclosed regarding his Debit Card(s) or the Bank
+    processing the instruction of the Card Holder. The Card Holder shall
+    fully indemnify and hold harmless the Bank in this regard. The Card
+    Holder shall maintain the secrecy of all information of confidential
+    nature and shall ensure that the same is not disclosed to any person
+    voluntarily, accidentally or by mistake. The Card Holder agrees and
+    acknowledges that any loss, damage, liability caused or suffered by
+    the Card Holder due to disclosure of all information of confidential
+    nature shall be borne exclusively by the Card Holder.
+  </p>
+  <p>
+    In the event the Card gets blocked after a number of incorrect
+    Password attempts, up to such number as may be intimated by the Bank
+    from time to time, the Card Holder shall be required to contact the
+    Bank's Customer Care Centre and request for unblocking of his Debit
+    Card after successfully authenticating himself.
+  </p>
+  <p>
+    The Card Holder is aware that in case of online payment using the
+    Debit Card over the Internet, the Card Holder will not sign the
+    charge-slips at the time of making the online payment. Accordingly,
+    the Card Holder accepts that, in the event of any dispute regarding
+    the authenticity or validity of such a payment after being
+    authenticated through the VbV Service, for any reason whatsoever, in
+    the event of the Card Holder's account already been debited, the Card
+    Holder shall not hold Bank liable for the amount paid. The Bank shall
+    not be liable, in any manner whatsoever, for the same.
+  </p>
+  <p>
+    The Card Holder shall be solely responsible for the payments made
+    through the Internet even in the event of the Card Holder claiming
+    non-possession of the Card with him/her. The Card Holder shall further
+    be solely responsible for any payments made using the Card through the
+    Internet for any purposes and cannot claim the invalidity of the same.
+  </p>
+  <p>
+    The Card Holder agrees and acknowledges that the Bank shall in no way
+    be held responsible or liable if the Card Holder incurs any loss as a
+    result of processing the instruction of the Card Holder pursuant to
+    the verification through the Password and the Card Holder shall fully
+    indemnify and hold harmless the Bank in this regard.
+  </p>
+  <p>
+    Any payments effected through the Internet using the Card Holder's
+    Password shall be deemed to be an instruction received from the Card
+    Holder itself. The use of the Card by the Card Holder for making
+    payments in terms of the VbV Service is at the Card Holder's own risk
+    and is the Card Holder's sole responsibility.
+  </p>
+  <p>
+    The Card Holder shall indemnify and hold the Bank, including its
+    officers, employees and agents, indemnified against all losses, costs,
+    penalties, and expenses which the Bank may incur, sustain, suffer or
+    is likely to suffer in connection with the execution of the Card
+    Holder's instructions and against all actions, claims, demands,
+    proceedings, losses, damages, costs, charges and expenses as a
+    consequence or by reason of providing the VbV Service.
+  </p>
+  <p>
+    The Bank has no obligation to verify the authenticity of any payment
+    made from the Card Holder's Password other than by means of
+    verification of the Card Holder's Password.
+  </p>
+  <li>
+    <h3>PROPRIETARY RIGHTS:</h3>
+  </li>
+  <p>
+    The Bank shall endeavor to advise from time to time the software such
+    as browsers, which are required for availing of the VbV Service. There
+    will be no obligation on the part of the Bank to support all or any
+    versions of the software as may be required for offering the VbV
+    Service. The Card Holder acknowledges that the software underlying the
+    VbV Service is the legal property of the respective vendors. The
+    permission given by the Bank to access the VbV service will not convey
+    any proprietary or ownership rights in such software. The Card Holder
+    shall not attempt to modify, translate, disassemble, decompile or
+    reverse engineer the software underlying the VbV Service or create any
+    derivative product based on the software.
+  </p>
+</ol>
+</div>`;
       }
       function modelOpenTerms() {
         document.getElementsByClassName("model")[0].style.display = "block";
@@ -521,6 +871,14 @@
       function modelClose() {
         document.getElementsByClassName("model")[0].style.display = "none";
         document.getElementsByClassName("model-pad")[0].innerHTML = "";
+      }
+      function modelCfrmOpen() {
+        document.getElementsByClassName("model-cfrm")[0].style.display = "flex";
+        document.getElementsByClassName("back-drop")[0].style.display = "block";
+      }
+      function closeCfmModel() {
+        document.getElementsByClassName("model-cfrm")[0].style.display = "none";
+        document.getElementsByClassName("back-drop")[0].style.display = "none";
       }
     </script>
   </body>
