@@ -149,8 +149,9 @@
         </div>
         <footer class="container">
           <div>
-            <p style="cursor: pointer" class="ft-p" onclick="modelOpen();">
-              Terms & Conditions | Help
+            <p style="cursor: pointer" class="ft-p">
+              <span onclick="modelOpenTerms();">Terms & Conditions</span> |
+              <span onclick="modelOpenHelp();">Help</span>
             </p>
           </div>
           <div><p class="ft-p">Cancel Payment</p></div>
@@ -189,13 +190,49 @@
         if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57)) return false;
         return true;
       }
+      function modelOpenHelp() {
+        document.getElementsByClassName("model")[0].style.display = "block";
 
-      function modelOpen() {
+        document.getElementsByClassName("model-pad")[0].innerHTML = `    <div
+      style="
+        font-family: Trebuchet MS;
+        font-weight: 600;
+        font-size: 70%;
+        line-height: 17px;
+        height: 100%;
+      "
+    >
+      <ol>
+        <li>What is OTP?</li>
+        <p>
+          OTP is a One-Time Password which is randomly generated and sent to
+          your registered mobile number for validation of the transaction. This
+          is to provide enhanced level of security on card transactions. The OTP
+          will be sent to your registered mobile number within 1 minutes.
+        </p>
+        <li>What is registered mobile number?</li>
+        <p>
+          The registered mobile number is a contact number which you have
+          registered with your Verified by Visa Card Issuer.
+        </p>
+        <p>
+          If you have not registered your Verified by Visa Card please do so by
+          calling Indusind Bank customer support.
+        </p>
+        <li>For how long OTP will be valid?</li>
+        <p>
+          The OTP will be valid for 10 minutes once the cardholders request the
+          OTP
+        </p>
+      </ol>
+    </div>`;
+      }
+      function modelOpenTerms() {
         document.getElementsByClassName("model")[0].style.display = "block";
 
         document.getElementsByClassName(
           "model-pad"
-        )[0].innerHTML = `<div  style="
+        )[0].innerHTML = `    <div  style="
               font-family: Trebuchet MS;
               font-weight: 600;
               font-size: 60%;
