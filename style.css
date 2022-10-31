@@ -56,9 +56,13 @@ html {
   border-radius: 5px;
   margin: 0 auto;
   box-shadow: 8px 11px 13px 0px #efefef;
-  height: 80vh;
+  height: 67vh;
 }
 @media only screen and (max-width: 299px) {
+  .model {
+    top: 48px;
+    height: 67vh;
+  }
   .main-error {
     position: relative;
     display: flex;
@@ -391,6 +395,10 @@ html {
   }
 }
 @media only screen and (min-width: 300px) and (max-width: 599px) {
+  .model {
+    top: 48px;
+    height: 67vh;
+  }
   .main-error {
     position: relative;
     display: flex;
@@ -713,6 +721,10 @@ html {
   }
 }
 @media only screen and (min-width: 600px) and (max-width: 1900px) {
+  .model {
+    top: 39px;
+    height: 67vh;
+  }
   .main-error {
     position: relative;
     display: flex;
@@ -1022,6 +1034,10 @@ html {
   }
 }
 @media only screen and (max-width: 600px) and (min-height: 450px) {
+  .model {
+    top: 44px;
+    height: 67vh;
+  }
   .main-error {
     position: relative;
     display: flex;
@@ -1353,6 +1369,10 @@ html {
   }
 }
 @media only screen and (min-width: 600px) and (min-height: 449px) {
+  .model {
+    top: 51px;
+    height: 67vh;
+  }
   .main-error {
     position: relative;
     display: flex;
