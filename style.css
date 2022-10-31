@@ -61,7 +61,7 @@ html {
   padding: 77px;
   font-size: 8px;
   font-family: "Roboto", sans-serif;
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 20px;
   text-align: center;
