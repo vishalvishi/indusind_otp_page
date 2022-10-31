@@ -73,7 +73,6 @@ html {
   top: 15px;
   border-radius: 5px;
   margin: 0 auto;
-  height: 67vh;
 }
 
 .back-drop {
@@ -119,7 +118,7 @@ html {
   }
   .model-cfrm {
     top: auto;
-    height: 39vh;
+    height: 28vh;
   }
   .main-error {
     position: relative;
@@ -479,7 +478,7 @@ html {
 @media only screen and (min-width: 300px) and (max-width: 599px) {
   .model-cfrm {
     top: auto;
-    height: 39vh;
+    height: 28vh;
     font-size: 9px;
   }
   .model {
@@ -833,7 +832,7 @@ html {
 @media only screen and (min-width: 600px) and (max-width: 1900px) {
   .model-cfrm {
     top: auto;
-    height: 39vh;
+    height: 28vh;
     font-size: 10px;
   }
   .model {
@@ -1165,7 +1164,7 @@ html {
 @media only screen and (max-width: 600px) and (min-height: 450px) {
   .model-cfrm {
     top: auto;
-    height: 39vh;
+    height: 28vh;
     font-size: 10px;
   }
   .model {
@@ -1528,7 +1527,7 @@ html {
 @media only screen and (min-width: 600px) and (min-height: 449px) {
   .model-cfrm {
     top: auto;
-    height: 39vh;
+    height: 28vh;
     font-size: 12px;
   }
   .model {
