@@ -1,7 +1,12 @@
 * {
   box-sizing: border-box;
 }
-body,
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+}
 html {
   margin: 0;
   padding: 0;
@@ -113,7 +118,7 @@ html {
 @media only screen and (max-width: 299px) {
   body,
   html {
-    overflow: auto;
+    /* overflow-y: scroll; */
   }
   .model {
     top: 48px;
@@ -482,7 +487,7 @@ html {
 @media only screen and (min-width: 300px) and (max-width: 599px) {
   body,
   html {
-    overflow: auto;
+    /* overflow-y: scroll; */
   }
   .model-cfrm {
     top: auto;
@@ -838,10 +843,6 @@ html {
   }
 }
 @media only screen and (min-width: 600px) and (max-width: 1900px) {
-  body,
-  html {
-    overflow: hidden;
-  }
   .model-cfrm {
     top: auto;
     height: 28vh;
@@ -1174,10 +1175,6 @@ html {
   }
 }
 @media only screen and (max-width: 600px) and (min-height: 450px) {
-  body,
-  html {
-    overflow: hidden;
-  }
   .model-cfrm {
     top: auto;
     height: 28vh;
@@ -1541,10 +1538,6 @@ html {
   }
 }
 @media only screen and (min-width: 600px) and (min-height: 449px) {
-  body,
-  html {
-    overflow: hidden;
-  }
   .model-cfrm {
     top: auto;
     height: 28vh;
