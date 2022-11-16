@@ -1,210 +1,2172 @@
 <!DOCTYPE html>
 <!-- saved from url=(0014)about:internet -->
 <html lang="en">
-  <head>
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=9" /> -->
 
-    <meta http-equiv="X-UA-Compatible" content="IE=IE8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Indusind Bank Otp Page</title>
-    <link href="./style.css" rel="stylesheet" />
-    <script src="./jquery-3.5.1.min.js"></script>
-  </head>
-  <body>
-    <div class="parent-container">
-      <div class="parent-container1">
-        <header class="container">
-          <img class="logo2" src="./indusind_logo.png" />
-          <img class="logo1" src="./master.png" />
-        </header>
-        <div class="main-container1">
-          <div class="sub-container1">
-            <div class="inner-sub-container1">
-              <form>
-                <!-- <div class="ref-ecom">
-                  <p class="hdr-p">Reference ECom_1234567890</p>
-                </div> -->
-                <div class="inner-mbl-sub-container1">
-                  <p>PAYTM PAYMENTS SERVICES</p>
-                  <div>
-                    <div class="inner-mbl-sub-container1-1">
-                      <img class="logo3" src="./rupee_icon.png" />
-                      <p>5000</p>
-                    </div>
+<head>
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=IE8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
+  <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Indusind Bank Otp Page</title>
+  <!-- <link href="./style.css" rel="stylesheet" /> -->
+  <!-- <link rel="stylesheet" th:href="@{/css/indusindStyle.css}"> -->
+  <script th:src="@{/libs/jquery-3.5.1.min.js}"></script>
+  <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> -->
+  </script>
+  
+  <style>
+    .cfm-btn,
+.cancelTrans {
+  cursor: pointer;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
+  min-height: -webkit-fill-available;
+  justify-content: space-between;
+}
+html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.parent-container {
+  position: relative;
+}
+.model-pad {
+  padding: 0px 15px 15px 15px;
+  height: 88%;
+  overflow-y: auto;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.cls-btn {
+  background-color: #f1f3f4;
+  height: 34px;
+  justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+.cls-btn img {
+  margin-right: 13px;
+}
+.model {
+  display: none;
+  z-index: 10000;
+  background-color: #f9f9f9;
+  position: absolute;
+  width: 66%;
+  max-width: 579px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  margin: 0 auto;
+  box-shadow: 8px 11px 13px 0px #efefef;
+  height: 67vh;
+}
+.model-cfrm {
+  padding: 77px;
+  font-size: 10px;
+  font-family: "Roboto", sans-serif;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  z-index: 10000;
+  background-color: #f9f9f9;
+  position: absolute;
+  min-width: 356px;
+  top: 15px;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+.back-drop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: none;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.239);
+  z-index: 9999;
+}
+.model-cfrm-1 {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.acpt {
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  background-color: #98272a;
+  padding: 7px 30px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: sans-serif;
+}
+.rjt {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  margin-left: 10px;
+  display: inline-block;
+  background-color: #cb9395;
+  padding: 7px 30px;
+  border-radius: 4px;
+  font-family: sans-serif;
+}
+@media only screen and (max-width: 299px) {
+  .model {
+    top: 45%;
+    height: 67vh;
+    font-size: 10px;
+  }
+  .model-cfrm {
+    top: 50%;
+    bottom: 50%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    height: 28vh;
+  }
+  .main-error {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .rsnd-btn a:link {
+    text-decoration: none;
+    color: #cb9395;
+  }
+  .error {
+    font-size: 10px;
+    gap: 4px;
+    align-items: center;
+    position: absolute;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+  }
+  .main-footer {
+    /* position: fixed; */
+    bottom: 0px;
+    width: 100%;
+  }
+  .logo1 {
+    height: 9px;
+    width: 30px;
+  }
+  .logo2 {
+    height: 10px;
+    width: 95px;
+  }
+  .logo3 {
+    height: 13px;
+    width: 13px;
+  }
+  .logo4 {
+    height: 15px;
+    width: 31px;
+  }
+  .logo5 {
+    height: 20px;
+    width: 20px;
+  }
+  .logo6 {
+    height: 17px;
+    width: 35px;
+  }
+  .logo7 {
+    height: 30px;
+    width: 30px;
+  }
+  .logo8 {
+    height: 18px;
+    width: 18px;
+  }
+  .sub-container2 {
+    display: none;
+  }
+  .footer-pgh {
+    padding: 11px;
+    display: flex;
+    width: 100%;
+    height: 63px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .footer-1 {
+    display: flex;
+    margin-bottom: 1px;
+    font-size: 10px;
+    color: #808080;
+    font-family: "Roboto", sans-serif;
+    justify-content: center;
+    gap: 7px;
+    align-items: center;
+  }
+  .footer-2 {
+    margin-top: 0;
+    line-height: 11px;
+    border-top: 2px solid #8080804a;
+    background-color: #f1f1f1;
+    font-size: 10px;
+    font-family: "Roboto", sans-serif;
+  }
+  .ref-ecom {
+    border: 1px solid #f1f1f1;
+    border-radius: 3.82353px;
+    background-color: #f1f1f1;
+    height: 19px;
+    padding: 7px;
+    align-items: center;
+    width: 89%;
+    display: flex;
+  }
+  .inner-mbl-sub-container2 {
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin-top: 11px;
+    border-radius: 6.82353px 6.82353px 6.82353px 6.82353px;
+    height: 141px;
+  }
+  .inner-mbl-sub-container1-1 {
+    display: flex;
+    gap: 1px;
+    align-items: center;
+  }
+  .inner-mbl-sub-container1-2 {
+    display: flex;
+    color: #808080;
+    font-size: 15px;
+    gap: 1px;
+    align-items: center;
+  }
+  .inner-mbl-sub-container1 {
+    color: #000000;
+    font-size: 10px;
+    height: 19px;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .inner-mbl-sub-container1-2 {
+    display: flex;
+    color: #808080;
+    font-size: 10px;
+    gap: 7px;
+    align-items: center;
+  }
+  .sub-container1 {
+    padding: 10px;
+    width: 85%;
+    margin: 0 auto;
+    border-radius: 6.82353px;
+    border: 2px solid #8080804a;
+  }
+  .exp-tim {
+    font-size: 10px;
+    font-family: "Roboto", sans-serif;
+  }
+  .ft-p {
+    font-family: "Roboto", sans-serif;
+    color: #cb9395;
+    font-size: 10px;
+    margin: 0px;
+  }
+  .container {
+    display: flex;
+    max-width: 85%;
+    margin: 0 auto;
+    height: 27px;
+    padding: 0 15px;
+    /* border: 1px solid rgb(129, 255, 129); */
+  }
+  .inner-sub-container2 {
+    display: flex;
+  }
+  .hdr-cont {
+    margin-top: 1px;
+    font-family: "Roboto", sans-serif;
+    font-size: 10px;
+  }
+  .inpt {
+    outline: none;
+    width: 60%;
+    height: 31px;
+    padding-left: 10px;
+    letter-spacing: 8px;
+    border-radius: 6.82353px 0px 0px 6.82353px;
+    border: 1px solid #e5e5e5;
+    font-family: "Roboto", sans-serif;
+    font-size: 11px;
+  }
+  .inpt::-webkit-input-placeholder {
+    font-size: 10px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+  }
+  .inpt:-ms-input-placeholder {
+    font-size: 10px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+  }
+  .inpt:-moz-placeholder {
+    font-size: 10px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+  }
+  .inpt::-moz-placeholder {
+    font-size: 10px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+  }
+  .hdr-p {
+    font-size: 9px;
+    font-family: "Roboto", sans-serif;
+  }
+  .rsnd-btn {
+    width: 40%;
+    height: 31px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    border-radius: 0px 6.82353px 6.82353px 0px;
+    background-color: #ffffff;
+    color: #cb9395;
+    border: 1px solid #e5e5e5;
+    font-family: "Roboto", sans-serif;
+    font-size: 10px;
+  }
+  .rsnd-btn p {
+    margin: 0px;
+  }
+  .rsnd-btn p:nth-child(2) {
+    color: #000000;
+    font-size: 10px;
+    font-family: "Roboto", sans-serif;
+  }
+  .tmr {
+    color: #98272a;
+  }
+  .cfm-btn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: #ffffff;
+    align-items: center;
+    border-radius: 6.82353px;
+    border: 1px solid #98272a;
+    background-color: #98272a;
+    height: 27px;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    margin: 30px 0px auto;
+  }
+  header {
+    height: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .main-container1 {
+    display: flex;
+    margin: 0 auto;
+    max-width: 658px;
+    height: 232px;
+  }
+  .sub-container2-mercht {
+    color: #000000;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+  }
+  .sub-container2-pgh {
+    color: #808080;
+    font-size: 19px;
+    margin-top: 0px;
+    height: 34px;
+    font-family: "Roboto", sans-serif;
+  }
+  .cpy-rigt {
+    margin-top: -13px;
+  }
+  .sub-container2-pwd {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: right;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 95px;
+    gap: 3px;
+    font-size: 13px;
+    color: #808080;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+  }
+  .sub-container2-ntk {
+    display: flex;
+    gap: 3px;
+    margin-top: -14px;
+    color: #808080;
+    font-size: 15px;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+  }
+  .sub-container2-amt {
+    color: #000000;
+    font-size: 17px;
+    display: flex;
+    height: 36px;
+    align-items: center;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+  }
+  .parent-container {
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .parent-container1 {
+    width: 100%;
+    margin-bottom: auto;
+    /* border: 1px solid rgb(2, 13, 78); */
+  }
+  .main-container2 {
+    border-radius: 0px 0px 8px 8px;
+    height: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #cb9395;
+    width: 56%;
+    margin: 0 auto;
+  }
+  footer {
+    height: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 300px) and (max-width: 599px) {
+  .model-cfrm {
+    top: 50%;
+    bottom: 50%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    height: 28vh;
+    font-size: 10px;
+  }
+  .model {
+    top: 45%;
+    height: 67vh;
+  }
+  .main-error {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .rsnd-btn a:link {
+    text-decoration: none;
+    color: #cb9395;
+  }
+  .error {
+    font-size: 10px;
+    gap: 4px;
+    align-items: center;
+    position: absolute;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+  }
+  .main-footer {
+    /* position: fixed; */
+    bottom: 0px;
+    width: 100%;
+  }
+  .logo1 {
+    height: 9px;
+    width: 30px;
+  }
+  .logo2 {
+    height: 10px;
+    width: 93px;
+  }
+  .logo3 {
+    height: 16px;
+    width: 16px;
+  }
+  .logo4 {
+    height: 15px;
+    width: 31px;
+  }
+  .logo5 {
+    height: 20px;
+    width: 20px;
+  }
+  .logo6 {
+    height: 17px;
+    width: 35px;
+  }
+  .logo7 {
+    height: 30px;
+    width: 30px;
+  }
+  .logo8 {
+    height: 22px;
+    width: 22px;
+  }
+  .sub-container2 {
+    display: none;
+  }
+  .footer-pgh {
+    padding: 7px;
+    display: flex;
+    width: 100%;
+    height: 47px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .footer-1 {
+    display: flex;
+    margin-bottom: 1px;
+    font-size: 11px;
+    color: #808080;
+    font-family: "Roboto", sans-serif;
+    justify-content: center;
+    gap: 7px;
+    align-items: center;
+  }
+  .footer-2 {
+    margin-top: 0;
+    line-height: 9px;
+    border-top: 2px solid #8080804a;
+    background-color: #f1f1f1;
+    font-size: 10px;
+    font-family: "Roboto", sans-serif;
+  }
+  .ref-ecom {
+    border: 1px solid #f1f1f1;
+    border-radius: 3.82353px;
+    background-color: #f1f1f1;
+    height: 18px;
+    padding: 7px;
+    align-items: center;
+    width: 89%;
+    display: flex;
+  }
+  .inner-mbl-sub-container2 {
+    background-color: #f1f1f1;
+    padding: 9px;
+    margin-top: 4px;
+    border-radius: 6.82353px;
+    height: 158px;
+  }
+  .inner-mbl-sub-container1-1 {
+    display: flex;
+    gap: 1px;
+    align-items: center;
+  }
+  .inner-mbl-sub-container1 {
+    color: #000000;
+    font-size: 11px;
+    height: 24px;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .inner-mbl-sub-container1-2 {
+    display: flex;
+    color: #808080;
+    font-size: 10px;
+    gap: 7px;
+    align-items: center;
+  }
+  .sub-container1 {
+    padding: 9px;
+    width: 85%;
+    margin: 0 auto;
+    border-radius: 6.82353px;
+    border: 2px solid #8080804a;
+  }
+  .exp-tim {
+    font-size: 11px;
+    font-family: "Roboto", sans-serif;
+  }
+  .ft-p {
+    font-family: "Roboto", sans-serif;
+    color: #cb9395;
+    font-size: 11px;
+  }
+  .container {
+    display: flex;
+    max-width: 85%;
+    margin: 0 auto;
+    height: 28px;
+    padding: 0 15px;
+    /* border: 1px solid rgb(129, 255, 129); */
+  }
+  .inner-sub-container2 {
+    display: flex;
+  }
+  .hdr-cont {
+    margin-top: 1px;
+    font-family: "Roboto", sans-serif;
+    font-size: 11px;
+  }
+  .inpt {
+    outline: none;
+    width: 60%;
+    height: 34px;
+    padding-left: 10px;
+    letter-spacing: 8px;
+    border-radius: 6.82353px 0px 0px 6.82353px;
+    border: 1px solid #e5e5e5;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+  }
+  .inpt::-webkit-input-placeholder {
+    font-size: 11px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+  }
+  .inpt:-ms-input-placeholder {
+    font-size: 11px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+  }
+  .inpt:-moz-placeholder {
+    font-size: 11px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+  }
+  .inpt::-moz-placeholder {
+    font-size: 11px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+  }
+  .hdr-p {
+    font-size: 10px;
+    font-family: "Roboto", sans-serif;
+  }
+  .rsnd-btn {
+    width: 40%;
+    height: 34px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    border-radius: 0px 6.82353px 6.82353px 0px;
+    background-color: #ffffff;
+    color: #cb9395;
+    border: 1px solid #e5e5e5;
+    font-family: "Roboto", sans-serif;
+    font-size: 11px;
+  }
+  .rsnd-btn p {
+    margin: 0px;
+  }
+  .rsnd-btn p:nth-child(2) {
+    color: #000000;
+    font-size: 10px;
+    font-family: "Roboto", sans-serif;
+  }
+  .tmr {
+    color: #98272a;
+  }
+  .cfm-btn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: #ffffff;
+    align-items: center;
+    border-radius: 6.82353px;
+    border: 1px solid #98272a;
+    background-color: #98272a;
+    height: 32px;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    font-size: 11px;
+    margin: 30px 0px auto;
+  }
+  header {
+    height: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .main-container1 {
+    display: flex;
+    margin: 0 auto;
+    max-width: 658px;
+    height: 252px;
+  }
+  .sub-container2-mercht {
+    color: #000000;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+  }
+  .sub-container2-pgh {
+    color: #808080;
+    font-size: 18px;
+    margin-top: 0px;
+    height: 34px;
+    font-family: "Roboto", sans-serif;
+  }
+  .cpy-rigt {
+    margin-top: -13px;
+  }
+  .sub-container2-pwd {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: right;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 95px;
+    gap: 3px;
+    font-size: 12px;
+    color: #808080;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+  }
+  .sub-container2-ntk {
+    display: flex;
+    gap: 3px;
+    margin-top: -14px;
+    color: #808080;
+    font-size: 15px;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+  }
+  .sub-container2-amt {
+    color: #000000;
+    font-size: 17px;
+    display: flex;
+    height: 36px;
+    align-items: center;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+  }
+  .parent-container {
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .parent-container1 {
+    width: 100%;
+    margin-bottom: auto;
+    /* border: 1px solid rgb(2, 13, 78); */
+  }
+  .main-container2 {
+    border-radius: 0px 0px 8px 8px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #cb9395;
+    width: 56%;
+    margin: 0 auto;
+  }
+  footer {
+    height: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 600px) and (max-width: 1900px) {
+  .model-cfrm {
+    top: 50%;
+    bottom: 50%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    height: 28vh;
+    font-size: 10px;
+  }
+  .model {
+    top: 45%;
+    height: 67vh;
+  }
+  .main-error {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .rsnd-btn a:link {
+    text-decoration: none;
+    color: #cb9395;
+  }
+  .error {
+    font-size: 10px;
+    gap: 4px;
+    align-items: center;
+    position: absolute;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+  }
+  .main-footer {
+    /* position: fixed; */
+    bottom: 0px;
+    width: 100%;
+  }
+  .logo1 {
+    height: 12px;
+    width: 35px;
+  }
+  .logo2 {
+    height: 14px;
+    width: 124px;
+  }
+  .logo3 {
+    height: 20px;
+    width: 20px;
+  }
+  .logo4 {
+    height: 20px;
+    width: 45px;
+  }
+  .logo5 {
+    height: 17px;
+    width: 17px;
+  }
+  .logo6 {
+    height: 17px;
+    width: 35px;
+  }
+  .logo7 {
+    height: 21px;
+    width: 21px;
+  }
+  .logo8 {
+    height: 30px;
+    width: 30px;
+  }
+  .footer-1 {
+    display: none;
+  }
+  .footer-pgh {
+    padding: 11px;
+    width: 100%;
+    display: flex;
+    height: 63px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .footer-2 {
+    margin-top: 0;
+    border-top: 2px solid #8080804a;
+    background-color: #f1f1f1;
+    font-size: 10px;
+    line-height: 12px;
+    font-family: "Roboto", sans-serif;
+  }
+  .inner-mbl-sub-container2 {
+    padding: 19px;
+    margin-top: -18px;
+    height: 219px;
+  }
+  .ref-ecom {
+    margin-left: 17px;
+    display: flex;
+    height: 20px;
+    padding: 7px;
+    width: 89%;
+    align-items: center;
+    border-radius: 3.82353px;
+    border: 1px solid #f1f1f1;
+    background-color: #f1f1f1;
+  }
+  .inner-mbl-sub-container1 {
+    display: none;
+  }
+  .exp-tim {
+    font-size: 11px;
+    font-family: "Roboto", sans-serif;
+  }
+  .ft-p {
+    font-family: "Roboto", sans-serif;
+    color: #cb9395;
+    font-size: 10px;
+  }
+  .container {
+    display: flex;
+    max-width: 579px;
+    margin: 0 auto;
+    height: 43px;
+    padding: 0 15px;
+    /* border: 1px solid rgb(129, 255, 129); */
+  }
+  .inner-sub-container2 {
+    display: flex;
+    margin: 17px 0px 0px 0px;
+  }
+  .hdr-cont {
+    line-height: 14px;
+    font-family: "Roboto", sans-serif;
+    font-size: 10px;
+  }
+  .inpt {
+    -webkit-text-security: disc;
+    font-family: "Ilisarniq";
+    -moz-text-security: disc;
+    outline: none;
+    width: 60%;
+    padding-left: 10px;
+    height: 39px;
+    letter-spacing: 9px;
+    border-radius: 6.82353px 0px 0px 6.82353px;
+    border: 1px solid #e5e5e5;
+    font-family: "Roboto", sans-serif;
+    font-size: 17px;
+  }
+  .inpt::-webkit-input-placeholder {
+    font-size: 11px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+  }
+  .inpt:-ms-input-placeholder {
+    font-size: 11px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+  }
+  .inpt:-moz-placeholder {
+    font-size: 11px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+  }
+  .inpt::-moz-placeholder {
+    font-size: 11px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+  }
+  .hdr-p {
+    line-height: 17px;
+    font-family: "Roboto", sans-serif;
+    font-size: 10px;
+  }
+  .rsnd-btn {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    width: 40%;
+    height: 39px;
+    border-radius: 0px 6.82353px 6.82353px 0px;
+    background-color: #ffffff;
+    color: #cb9395;
+    border: 1px solid #e5e5e5;
+    font-family: "Roboto", sans-serif;
+    font-size: 11px;
+  }
+  .rsnd-btn p {
+    margin: 0px;
+  }
+  .rsnd-btn p:nth-child(2) {
+    color: #000000;
+    font-size: 10px;
+    font-family: "Roboto", sans-serif;
+  }
+  .tmr {
+    color: #98272a;
+  }
+  .cfm-btn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: #ffffff;
+    align-items: center;
+    border-radius: 6.82353px;
+    border: 1px solid #98272a;
+    background-color: #98272a;
+    height: 35px;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    margin: 34px auto 0px auto;
+  }
+  header {
+    height: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .main-container1 {
+    display: flex;
+    margin: 0 auto;
+    max-width: 579px;
+    height: 223px;
+  }
+  .sub-container1 {
+    padding: 17px;
+    width: 60%;
+    border-radius: 6.82353px 0px 0px 6.82353px;
+    border-left: 2px solid #8080804a;
+    border-top: 2px solid #8080804a;
+    border-bottom: 2px solid #8080804a;
+  }
+  .sub-container2 {
+    border-radius: 0px 6.82353px 6.82353px 0px;
+    background-color: #f1f1f1;
+    width: 40%;
+    padding: 18px;
+    border-left: 2px solid #8080804a;
+    border-right: 2px solid #8080804a;
+    border-top: 2px solid #8080804a;
+    border-bottom: 2px solid #8080804a;
+  }
+  .sub-container2-mercht {
+    color: #000000;
+    text-align: right;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+  }
+  .sub-container2-pgh {
+    color: #808080;
+    font-size: 12px;
+    text-align: right;
+    margin-top: 0px;
+    height: 17px;
+    font-family: "Roboto", sans-serif;
+  }
+  .cpy-rigt {
+    margin-top: -13px;
+  }
+  .sub-container2-pwd {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: right;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 14px;
+    gap: 3px;
+    font-size: 10px;
+    color: #808080;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+  }
+  .sub-container2-ntk {
+    display: flex;
+    gap: 3px;
+    margin-top: -14px;
+    color: #808080;
+    font-size: 12px;
+    flex-flow: row-reverse wrap;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+  }
+  .sub-container2-amt {
+    color: #000000;
+    font-size: 13px;
+    display: flex;
+    flex-flow: row-reverse wrap;
+    height: 36px;
+    align-items: center;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+  }
+  .parent-container {
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .parent-container1 {
+    margin-bottom: auto;
+    width: 100%;
+    /* border: 1px solid rgb(2, 13, 78); */
+  }
+  .main-container2 {
+    border-radius: 0px 0px 8px 8px;
+    height: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #cb9395;
+    max-width: 426px;
+    margin: 0 auto;
+  }
+  footer {
+    height: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 600px) and (min-height: 300px) {
+  .model-cfrm {
+    top: 50%;
+    bottom: 50%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    height: 28vh;
+    font-size: 10px;
+  }
+  .model {
+    top: 45%;
+    height: 67vh;
+  }
+  .main-error {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .rsnd-btn a:link {
+    text-decoration: none;
+    color: #cb9395;
+  }
+  .error {
+    font-size: 10px;
+    gap: 4px;
+    align-items: center;
+    position: absolute;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+  }
+  .main-footer {
+    /* position: fixed; */
+    bottom: 0px;
+    width: 100%;
+  }
+  .logo1 {
+    height: 19px;
+    width: 41px;
+  }
+  .logo2 {
+    height: 15px;
+    width: 123px;
+  }
+  .logo3 {
+    height: 13px;
+    width: 13px;
+  }
+  .logo4 {
+    height: 15px;
+    width: 31px;
+  }
+  .logo5 {
+    height: 20px;
+    width: 20px;
+  }
+  .logo6 {
+    height: 17px;
+    width: 35px;
+  }
+  .logo7 {
+    height: 30px;
+    width: 30px;
+  }
+  .logo8 {
+    height: 18px;
+    width: 18px;
+  }
+  .sub-container2 {
+    display: none;
+  }
+  .footer-pgh {
+    padding: 11px;
+    display: flex;
+    width: 100%;
+    height: 63px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .footer-1 {
+    display: flex;
+    margin-bottom: 1px;
+    font-size: 10px;
+    color: #808080;
+    font-family: "Roboto", sans-serif;
+    justify-content: center;
+    gap: 7px;
+    align-items: center;
+  }
+  .footer-2 {
+    margin-top: 0;
+    line-height: 11px;
+    border-top: 2px solid #8080804a;
+    background-color: #f1f1f1;
+    font-size: 8px;
+    font-family: "Roboto", sans-serif;
+  }
+  .ref-ecom {
+    border: 1px solid #f1f1f1;
+    border-radius: 3.82353px;
+    background-color: #f1f1f1;
+    height: 19px;
+    padding: 7px;
+    align-items: center;
+    width: 89%;
+    display: flex;
+  }
+  .inner-mbl-sub-container2 {
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin-top: 11px;
+    border-radius: 6.82353px 6.82353px 6.82353px 6.82353px;
+    height: 197px;
+  }
+  .inner-mbl-sub-container1-1 {
+    display: flex;
+    gap: 1px;
+    align-items: center;
+  }
+  .inner-mbl-sub-container1-2 {
+    display: flex;
+    color: #808080;
+    font-size: 11px;
+    gap: 1px;
+    align-items: center;
+  }
+  .inner-mbl-sub-container1 {
+    color: #000000;
+    font-size: 10px;
+    height: 19px;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .inner-mbl-sub-container1-2 {
+    display: flex;
+    color: #808080;
+    font-size: 11px;
+    gap: 7px;
+    align-items: center;
+  }
+  .sub-container1 {
+    padding: 10px;
+    width: 85%;
+    margin: 0 auto;
+    border-radius: 6.82353px;
+    border: 2px solid #8080804a;
+  }
+  .exp-tim {
+    font-size: 10px;
+    font-family: "Roboto", sans-serif;
+  }
+  .ft-p {
+    font-family: "Roboto", sans-serif;
+    color: #cb9395;
+    font-size: 10px;
+    margin: 0px;
+  }
+  .container {
+    display: flex;
+    max-width: 85%;
+    margin: 0 auto;
+    height: 59px;
+    padding: 0 15px;
+    /* border: 1px solid rgb(129, 255, 129); */
+  }
+  .inner-sub-container2 {
+    display: flex;
+  }
+  .hdr-cont {
+    margin-top: 1px;
+    font-family: "Roboto", sans-serif;
+    font-size: 11px;
+  }
+  .inpt {
+    outline: none;
+    width: 60%;
+    height: 45px;
+    padding-left: 10px;
+    letter-spacing: 13px;
+    border-radius: 6.82353px 0px 0px 6.82353px;
+    border: 1px solid #e5e5e5;
+    font-family: "Roboto", sans-serif;
+    font-size: 11px;
+  }
+  .inpt::-webkit-input-placeholder {
+    font-size: 11px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+  }
+  .inpt:-ms-input-placeholder {
+    font-size: 11px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+  }
+  .inpt:-moz-placeholder {
+    font-size: 11px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+  }
+  .inpt::-moz-placeholder {
+    font-size: 11px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+  }
+  .hdr-p {
+    font-size: 8px;
+    font-family: "Roboto", sans-serif;
+  }
+  .rsnd-btn {
+    width: 40%;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    border-radius: 0px 6.82353px 6.82353px 0px;
+    background-color: #ffffff;
+    color: #cb9395;
+    border: 1px solid #e5e5e5;
+    font-family: "Roboto", sans-serif;
+    font-size: 11px;
+  }
+  .rsnd-btn p {
+    margin: 0px;
+  }
+  .rsnd-btn p:nth-child(2) {
+    color: #000000;
+    font-size: 10px;
+    font-family: "Roboto", sans-serif;
+  }
+  .tmr {
+    color: #98272a;
+  }
+  .cfm-btn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: #ffffff;
+    align-items: center;
+    border-radius: 6.82353px;
+    border: 1px solid #98272a;
+    background-color: #98272a;
+    height: 37px;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    font-size: 13px;
+    margin: 39px 0px auto;
+  }
+  header {
+    height: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .main-container1 {
+    display: flex;
+    margin: 0 auto;
+    max-width: 658px;
+    height: 294px;
+  }
+  .sub-container2-mercht {
+    color: #000000;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+  }
+  .sub-container2-pgh {
+    color: #808080;
+    font-size: 17px;
+    margin-top: 0px;
+    height: 34px;
+    font-family: "Roboto", sans-serif;
+  }
+  .cpy-rigt {
+    margin-top: -13px;
+  }
+  .sub-container2-pwd {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: right;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 95px;
+    gap: 3px;
+    font-size: 11px;
+    color: #808080;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+  }
+  .sub-container2-ntk {
+    display: flex;
+    gap: 3px;
+    margin-top: -14px;
+    color: #808080;
+    font-size: 14px;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+  }
+  .sub-container2-amt {
+    color: #000000;
+    font-size: 16px;
+    display: flex;
+    height: 36px;
+    align-items: center;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+  }
+  .parent-container {
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .parent-container1 {
+    width: 100%;
+    margin-bottom: auto;
+    /* border: 1px solid rgb(2, 13, 78); */
+  }
+  .main-container2 {
+    border-radius: 0px 0px 8px 8px;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #cb9395;
+    width: 69%;
+    margin: 0 auto;
+  }
+  footer {
+    height: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 600px) and (min-height: 449px) {
+  .model-cfrm {
+    top: 50%;
+    bottom: 50%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    height: 28vh;
+    font-size: 12px;
+  }
+  .model {
+    top: 45%;
+    height: 67vh;
+  }
+  .main-error {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .rsnd-btn a:link {
+    text-decoration: none;
+    color: #cb9395;
+  }
+  .error {
+    font-size: 12px;
+    gap: 4px;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+  }
+  .main-footer {
+    /* position: fixed; */
+    bottom: 0px;
+    width: 100%;
+  }
+  .logo1 {
+    height: 39px;
+    width: 60px;
+  }
+  .logo2 {
+    height: 21px;
+    width: 132px;
+  }
+  .logo3 {
+    height: 20px;
+    width: 20px;
+  }
+  .logo4 {
+    height: 20px;
+    width: 45px;
+  }
+  .logo5 {
+    height: 17px;
+    width: 17px;
+  }
+  .logo6 {
+    height: 17px;
+    width: 35px;
+  }
+  .logo7 {
+    height: 21px;
+    width: 21px;
+  }
+  .logo8 {
+    height: 30px;
+    width: 30px;
+  }
+  .footer-1 {
+    display: none;
+  }
+  .footer-pgh {
+    padding: 11px;
+    width: 100%;
+    display: flex;
+    height: 63px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .footer-2 {
+    margin-top: 0;
+    border-top: 2px solid #8080804a;
+    background-color: #f1f1f1;
+    font-size: 11px;
+    line-height: 12px;
+    font-family: "Roboto", sans-serif;
+  }
+  .inner-mbl-sub-container2 {
+    padding: 19px;
+    margin-top: -18px;
+    height: 219px;
+  }
+  .ref-ecom {
+    margin-left: 17px;
+    display: flex;
+    height: 20px;
+    padding: 7px;
+    width: 89%;
+    align-items: center;
+    border-radius: 3.82353px;
+    border: 1px solid #f1f1f1;
+    background-color: #f1f1f1;
+  }
+  .inner-mbl-sub-container1 {
+    display: none;
+  }
+  .exp-tim {
+    font-size: 13px;
+    font-family: "Roboto", sans-serif;
+  }
+  .ft-p {
+    font-family: "Roboto", sans-serif;
+    color: #cb9395;
+    font-size: 12px;
+  }
+  .container {
+    display: flex;
+    max-width: 579px;
+    margin: 0 auto;
+    height: 62px;
+    padding: 0 15px;
+    /* border: 1px solid rgb(129, 255, 129); */
+  }
+  .inner-sub-container2 {
+    display: flex;
+    margin: 20px 0px 0px 0px;
+  }
+  .hdr-cont {
+    line-height: 14px;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+  }
+  .inpt {
+    outline: none;
+    width: 60%;
+    padding-left: 17px;
+    height: 57px;
+    letter-spacing: 15px;
+    border-radius: 6.82353px 0px 0px 6.82353px;
+    border: 1px solid #e5e5e5;
+    font-family: "Roboto", sans-serif;
+    font-size: 17px;
+  }
+  .inpt::-webkit-input-placeholder {
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+  }
+  .inpt:-ms-input-placeholder {
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+  }
+  .inpt:-moz-placeholder {
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+  }
+  .inpt::-moz-placeholder {
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 1px;
+  }
+  .hdr-p {
+    line-height: 17px;
+    font-family: "Roboto", sans-serif;
+    font-size: 11px;
+  }
+  .rsnd-btn {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    width: 40%;
+    height: 57px;
+    border-radius: 0px 6.82353px 6.82353px 0px;
+    background-color: #ffffff;
+    color: #cb9395;
+    border: 1px solid #e5e5e5;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+  }
+  .rsnd-btn p {
+    margin: 0px;
+  }
+  .rsnd-btn p:nth-child(2) {
+    color: #000000;
+    font-size: 11px;
+    font-family: "Roboto", sans-serif;
+  }
+  .tmr {
+    color: #98272a;
+  }
+  .cfm-btn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: #ffffff;
+    align-items: center;
+    border-radius: 6.82353px;
+    border: 1px solid #98272a;
+    background-color: #98272a;
+    height: 50px;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    margin: 55px auto 0px auto;
+  }
+  header {
+    height: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .main-container1 {
+    display: flex;
+    margin: 0 auto;
+    max-width: 579px;
+    height: 302px;
+  }
+  .sub-container1 {
+    padding: 17px;
+    width: 60%;
+    border-radius: 6.82353px 0px 0px 6.82353px;
+    border-left: 2px solid #8080804a;
+    border-top: 2px solid #8080804a;
+    border-bottom: 2px solid #8080804a;
+  }
+  .sub-container2 {
+    border-radius: 0px 6.82353px 6.82353px 0px;
+    background-color: #f1f1f1;
+    width: 40%;
+    padding: 18px;
+    border-left: 2px solid #8080804a;
+    border-right: 2px solid #8080804a;
+    border-top: 2px solid #8080804a;
+    border-bottom: 2px solid #8080804a;
+  }
+  .sub-container2-mercht {
+    color: #000000;
+    text-align: right;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+  }
+  .sub-container2-pgh {
+    color: #808080;
+    font-size: 15px;
+    text-align: right;
+    margin-top: 0px;
+    height: 17px;
+    font-family: "Roboto", sans-serif;
+  }
+  .cpy-rigt {
+    margin-top: -13px;
+  }
+  .sub-container2-pwd {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: right;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 78px;
+    gap: 3px;
+    font-size: 10px;
+    color: #808080;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+  }
+  .sub-container2-ntk {
+    display: flex;
+    gap: 3px;
+    margin-top: -14px;
+    color: #808080;
+    font-size: 12px;
+    flex-flow: row-reverse wrap;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+  }
+  .sub-container2-amt {
+    color: #000000;
+    font-size: 13px;
+    display: flex;
+    flex-flow: row-reverse wrap;
+    height: 36px;
+    align-items: center;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+  }
+  .parent-container {
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .parent-container1 {
+    margin-bottom: auto;
+    width: 100%;
+    /* border: 1px solid rgb(2, 13, 78); */
+  }
+  .main-container2 {
+    border-radius: 0px 0px 8px 8px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #cb9395;
+    max-width: 426px;
+    margin: 0 auto;
+  }
+  footer {
+    height: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+#otp-label.slide-top {
+  display: block;
+}
+#otp-label {
+  display: none;
+}
+.rectangle {
+  position: fixed;
+  bottom: 2%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: #ffddd9;
+  transform: scale(0) translateX(-50%);
+  border-radius: 50%;
+  opacity: 0;
+  overflow: hidden;
+  -webkit-animation: scale-in 0.3s ease-out forwards,
+    expand 0.35s 0.25s ease-out forwards;
+  animation: scale-in 0.3s ease-out forwards,
+    expand 0.35s 0.25s ease-out forwards;
+}
+.notification-text {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  -webkit-animation: fade-in 0.65s ease-in forwards;
+  animation: fade-in 0.65s ease-in forwards;
+}
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+@-webkit-keyframes scale-in {
+  100% {
+    transform: scale(1) translateX(-50%);
+    opacity: 1;
+  }
+}
+@keyframes scale-in {
+  100% {
+    transform: scale(1) translateX(-50%);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes expand {
+  50% {
+    width: 350px;
+    border-radius: 6px;
+  }
+  100% {
+    width: 300px;
+    border-radius: 4px;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+      0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 3px 3px -1px rgba(0, 0, 0, 0.12);
+  }
+}
+@keyframes expand {
+  50% {
+    width: 350px;
+    border-radius: 6px;
+  }
+  100% {
+    width: 300px;
+    border-radius: 4px;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+      0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 3px 3px -1px rgba(0, 0, 0, 0.12);
+  }
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="parent-container">
+    <div class="parent-container1">
+      <header class="container">
+        <img th:src="@{/img/indusind_logo.png}" class="logo2" />
+        <img th:src="@{/img/mc-id.svg}" class="logo1" />
+      </header>
+      <div class="main-container1">
+        <div class="sub-container1" style="border: 2px solid #b1b1b1; border-image: none;">
+          <div class="inner-sub-container1">
+            <from>
+              <!-- <div class="ref-ecom">
+                <p class="hdr-p">Reference ECom_<span th:text="${result.otpreferenceid}" id="otpRefId"></span></p>
+              </div> -->
+              <div class="inner-mbl-sub-container1">
+                <strong><p th:text="${result.merchantName}">PAYTM PAYMENTS SERVICES</p></strong>
+                <div>
+                  <div class="inner-mbl-sub-container1-1">
+                    <!-- <img th:src="@{/img/rupee_icon.png}" class="logo3" /> -->
+                  <strong><p th:text="${result.purchaseAmount}">5000</p></strong>
                   </div>
                 </div>
-                <div class="inner-mbl-sub-container1">
-                  <div class="inner-mbl-sub-container1-2">
-                    <img class="logo4" src="./visa_sm_logo.jpg" />
-                    <p>4132 xxxx xxxx 1234</p>
-                  </div>
-                  <p class="inner-mbl-sub-container1-2">2 September 2022</p>
+              </div>
+              <div class="inner-mbl-sub-container1">
+                <div class="inner-mbl-sub-container1-2">
+                  <img th:src="@{/img/mc-id-sm.svg}" class="logo4" />
+                  <p class="masked">xxxx xxxx xxxx xxxx</p>
                 </div>
-                <div class="inner-mbl-sub-container2">
-                  <p class="hdr-cont">
-                    Enter OTP sent to your registered mobile number ******8395
-                    and email ID ash********@indusind.com
+                <!-- <p class="inner-mbl-sub-container1-2">2 September 2022</p> -->
+              </div>
+              <div class="inner-mbl-sub-container2">
+                <p class="hdr-cont">
+
+                <strong><span id="phoneNumberCheck" th:text="${result.mobileNo}" hidden></span></strong>
+              <strong><span id="emailIdCheck" th:text="${result.emailId}" hidden></span></strong>
+                  <span id="mailAndPhoneOtp" style="display:none">Enter OTP sent to your registered mobile number <strong><span class="phone"
+                      th:text="${result.mobileNo}"> </span></strong>
+                    <br>
+                    & email ID <strong><span class="email" th:text="${result.emailId}"></span></strong>
+                    <!-- &nbsp; <a href="#" class ="not_my_con" onclick="notMyContact();">Not my contact</a> -->
+                  </span>
+                  <span id="mobileOtp" style="display:none">Enter OTP sent to your registered mobile number <strong><span class="phone"
+                      th:text="${result.mobileNo}"></span></strong>
+                    <!-- &nbsp; <a href="#" class ="not_my_con" onclick="notMyContact();">Not my contact</a> -->
+                  </span>
+                  </span>
+                  <span id="mailOtp" style="display:none">Enter OTP sent to your registered email ID <strong><span class="email"
+                      th:text="${result.emailId}"></span></strong>
+                    <!-- &nbsp; <a href="#" class ="not_my_con" onclick="notMyContact();">Not my contact</a> -->
+                  </span>
+                  </span>
+
+                  <!-- Enter OTP sent to your registered mobile number <span class="phone"
+                    th:text="${result.mobileNo}"></span>
+                  and email ID <span class="email" th:text="${result.emailId}"></span> -->
+                </p>
+                <div class="inner-sub-container2">
+                  <input class="inpt" type="password" maxlength="6" inputmode="numeric" placeholder="Enter OTP"
+                    autocomplete="off" id="authValue" onkeypress="return onlyNumberKey(event)"
+                    oninput="checkForButtonDisable(this.value)" onfocus="changeBorderColor(true)"
+                    onblur="changeBorderColor(false)" />
+
+                  <button class="rsnd-btn" onclick="resendOtp();">
+                    <a href="#" style="color: #cb9395;" id="rsend">Resend OTP</a>
+                    <p style="display:none" id="rsendTimer">In <span id="resendCounter"></span>s</p>
+                  </button>
+                </div>
+                <div class="main-error">
+                  <p class="error" id="contact-cust" style="width: 100%;left: 50%; top: 142%; text-align: center; margin-top: 18px; display: none; transform: translate(-50%, -50%);">
+                    <!-- Invalid OTP 1 attempt remaining -->
+                    <span>
+                      <img th:src="@{/img/indus-error.svg}" />
+                    </span>
+                    <span class="contact-cust" style="display: block; color: red">Please contact bank
+                      customer care</span>
                   </p>
-                  <div class="inner-sub-container2">
-                    <input
-                      class="inpt"
-                      type="password"
-                      maxlength="6"
-                      inputmode="numeric"
-                      placeholder="Enter OTP"
-                      autocomplete="off"
-                      onkeypress="return onlyNumberKey(event)"
-                    />
-                    <button class="rsnd-btn">
-                      <a href="#">Resend OTP</a>
-                      <p>In 50s</p>
-                    </button>
-                  </div>
-                  <div class="main-error">
-                    <p class="error" style="display: none">
-                      <!-- Invalid OTP 1 attempt remaining -->
-                      <span>
-                        <img src="./error.svg" />
-                      </span>
-                      <span
-                        id="contact-cust"
-                        class="contact-cust"
-                        style="color: red"
-                        >Please contact bank customer care</span
-                      >
-                    </p>
-                    <p class="error" style="display: none">
-                      <span>
-                        <img src="./error.svg" />
-                      </span>
-                      <span
-                        id="resend-otp"
-                        class="resend-otp"
-                        style="color: #34a955"
-                        >OTP Resend</span
-                      >
-                    </p>
-                    <p class="error" style="display: none">
-                      <span>
-                        <img src="./error.svg" />
-                      </span>
-                      <span
-                        id="incorrect-otp"
-                        class="incorrect-otp"
-                        style="color: red"
-                        >Incorrect OTP! Please try again</span
-                      >
-                    </p>
-                    <p class="error" style="display: none">
-                      <span>
-                        <img src="./error.svg" />
-                      </span>
-                      <span
-                        id="limit-exhausted-title"
-                        class="limit-exhausted-title"
-                        style="color: red"
-                        >OTP limit exhausted</span
-                      >
-                    </p>
-                    <p class="error" style="display: none">
-                      <span
-                        id="limit-exhausted-desc"
-                        class="limit-exhausted-desc"
-                        style="color: #34a955"
-                        >Please wait for SMS to receive OTP or retry after
-                        sometime</span
-                      >
-                    </p>
-                  </div>
-                  <button class="cfm-btn" type="submit">Confirm & Pay</button>
+                  <p class="error" id="resend-otp" style="width: 100%;left: 50%; top: 142%; text-align: center; margin-top: 18px; display: none; transform: translate(-50%, -50%);">
+                    <span>
+                      <img th:src="@{/img/indus-error.svg}" />
+                    </span>
+                    <span class="resend-otp" style="color: #34a955">OTP Resend</span>
+                  </p>
+                  <p class="error" id="incorrect-otp" style="width: 100%;left: 50%; top: 142%; text-align: center; margin-top: 18px; display: none; transform: translate(-50%, -50%);">
+                    <span>
+                      <img th:src="@{/img/indus-error.svg}" />
+                    </span>
+                    <span class="incorrect-otp" style="color: red">Incorrect OTP! Please try again</span>
+                  </p>
+                  <p class="error" id="limit-exhausted-title" style="width: 100%;left: 50%; top: 142%; text-align: center; margin-top: 18px; display: none; transform: translate(-50%, -50%);">
+                    <span>
+                      <img th:src="@{/img/indus-error.svg}" />
+                    </span>
+                    <span class="limit-exhausted-title" style="color: red">OTP resend limit exhausted</span>
+                  </p>
+                  <p class="error" id="limit-exhausted-desc" style="width: 100%;left: 50%; top: 142%; text-align: center; margin-top: 18px; display: none; transform: translate(-50%, -50%);">
+                    <span class="limit-exhausted-desc" style="color: #34a955">Please wait for SMS to receive OTP or
+                      retry after
+                      sometime</span>
+                  </p>
                 </div>
-              </form>
-            </div>
+                <button class="cfm-btn" type="submit" id="otpsubmit" onclick="payAmount();" disabled="true">Confirm &
+                  Pay</button>
+              </div>
+            </from>
           </div>
-          <div class="sub-container2">
-            <div>
-              <div class="sub-container2-pgh">
-                <p>Amount to be paid</p>
-              </div>
-              <div class="sub-container2-amt">
-                <p>5000</p>
-                <img class="logo5" src="./rupee_icon.png" />
-              </div>
-              <hr />
-              <p class="sub-container2-mercht">AMAZON</p>
-              <div class="sub-container2-ntk">
-                <p>4132 xxxx xxxx 1234</p>
-                <img class="logo6" src="./visa_sm_logo.jpg" />
-              </div>
-              <div class="sub-container2-pwd">
-                <img class="logo7" src="./m2p_logo.png" />
-                <p>Powered by</p>
-              </div>
+        </div>
+        <div class="sub-container2" style="border-width: 2px 2px 2px 0px; border-style: solid; border-color: #b1b1b1; border-image: none;">
+          <div>
+            <div class="sub-container2-pgh">
+              <p>Amount to be paid</p>
+            </div>
+            <div class="sub-container2-amt">
+            <strong><p th:text="${result.purchaseAmount}">5000</p></strong>
+              <!-- <img th:src="@{/img/rupee_icon.png}" class="logo5" /> -->
+            </div>
+            <hr />
+          <strong><p class="sub-container2-mercht" th:text="${result.merchantName}">AMAZON</p></strong>
+            <div class="sub-container2-ntk">
+              <p class="masked">xxxx xxxx xxxx xxxx</p>
+              <img th:src="@{/img/mc-id-sm.svg}" class="logo6" />
+            </div>
+            <div class="sub-container2-pwd">
+              <img th:src="@{/img/m2p_logo.png}" class="logo7" />
+              <p>Powered by</p>
             </div>
           </div>
         </div>
-        <div class="main-container2">
-          <p class="exp-tim">
-            Page will expire in <span class="tmr">05:00</span> mins
+      </div>
+      <div class="main-container2">
+        <p class="exp-tim">
+          Page will expire in <span class="tmr" id="exprire_time">10:00</span> mins
+        </p>
+      </div>
+      <footer class="container">
+        <div>
+          <p style="cursor: pointer" class="ft-p">
+            <span onclick="modelOpenTerms();">Terms & Conditions</span> |
+            <span onclick="modelOpenHelp();">Help</span>
           </p>
         </div>
-        <footer class="container">
-          <div>
-            <p style="cursor: pointer" class="ft-p">
-              <span onclick="modelOpenTerms();">Terms & Conditions</span> |
-              <span onclick="modelOpenHelp();">Help</span>
-            </p>
-          </div>
-          <div>
-            <p class="ft-p" style="cursor: pointer" onclick="modelCfrmOpen();">
-              Cancel Payment
-            </p>
-          </div>
-        </footer>
-      </div>
-      <div class="model">
-        <div class="cls-btn">
-          <a href="#" onclick="modelClose();"
-            ><img
-              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAlUlEQVRIie2UPQqAMAxGn97Bovc/iS7i36KDx6lLBRWVJFVw8JsKTb4XmjTw64uqgB5wihwHDEApCW4BD0xCiAuxHmgkgAwYQ8IMFIrYXAKQQszmEki0+R3kMfNV2yZOh7Nm0m61rVpVeRoBTSJyd3r1ic4aqvknavOrOzVEMopmiGbOTZAO+7JrJYAa27ruQ+6vj2kBkvdNfrIpLCQAAAAASUVORK5CYII="
-              alt="close"
-          /></a>
+        <div>
+          <p class="ft-p cancelTrans" style="cursor: pointer" onclick="modelCfrmOpen();">Cancel Payment</p>
         </div>
-        <div class="model-pad"></div>
+      </footer>
+    </div>
+    <div class="model">
+      <div class="cls-btn">
+        <a href="#" onclick="modelClose();"
+          ><img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAlUlEQVRIie2UPQqAMAxGn97Bovc/iS7i36KDx6lLBRWVJFVw8JsKTb4XmjTw64uqgB5wihwHDEApCW4BD0xCiAuxHmgkgAwYQ8IMFIrYXAKQQszmEki0+R3kMfNV2yZOh7Nm0m61rVpVeRoBTSJyd3r1ic4aqvknavOrOzVEMopmiGbOTZAO+7JrJYAa27ruQ+6vj2kBkvdNfrIpLCQAAAAASUVORK5CYII="
+            alt="close"
+        /></a>
       </div>
-      <div class="back-drop">
-        <div class="model-cfrm">
-          <div><p>Are you sure you want to cancel payment</p></div>
-          <div>
-            <div class="model-cfrm-1">
-              <p class="acpt">Yes</p>
-              <p class="rjt" onclick="closeCfmModel();">No</p>
-            </div>
+      <div class="model-pad"></div>
+    </div>
+    <div class="back-drop">
+      <div class="model-cfrm">
+        <div><p>Are you sure you want to cancel payment</p></div>
+        <div>
+          <div class="model-cfrm-1">
+            <p class="acpt" onclick="cancelPayment();">Yes</p>
+          <p class="rjt" onclick="closeCfmModel();">No</p>
           </div>
         </div>
       </div>
     </div>
-    <div class="main-footer">
-      <div class="footer-1">
-        <p>Powered by</p>
-        <img class="logo8" src="./m2p_logo.png" />
-      </div>
-      <div class="footer-2">
-        <div class="footer-pgh">
-          <p>
-            To update your Add-on Cardholder's contact details, please cad 1860
-            263 7777, Alternatively, SMS AMOB Last 4 digits of Add-on Card-
-            Add-on Mobile No. to 5676757 & SMS AEML Last 4 digits of Add-on
-            Cards Add-on Email ID to 5676767 from registered mobile number
-          </p>
-        </div>
-      </div>
+  </div>
+  <div class="main-footer">
+    <div class="footer-1">
+      <p>Powered by</p>
+      <img th:src="@{/img/m2p_logo.png}" class="logo8" />
     </div>
-    <script>
-      // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-      let vh = window.innerHeight * 0.01;
+    <!-- <div class="footer-2">
+      <div class="footer-pgh">
+        <p>
+          To update your Add-on Cardholder's contact details, please call @ 1860
+          267 7777, Alternatively, SMS AMOB Last 4 digits of Add-on Card-
+          Add-on Mobile No. to 5676757 & SMS AEML Last 4 digits of Add-on
+          Cards Add-on Email ID to 5676767 from registered mobile number
+        </p>
+      </div>
+    </div> -->
+  </div>
+
+  <!-- default content -->
+  <input type="text" id="txnid" th:value="${result.txnid}" hidden>
+  <input type="text" id="bankCode" th:value="${result.bankCode}" hidden>
+  <!-- <input type="text" id="authTypes" th:value="${result.authTypes}" hidden> -->
+  <p hidden id="key" th:text="${result.key}"></p>
+  <!-- <form action="" name="PAResform" id="merchant" method="POST">
+    <input type="text" name="PaRes" id="pares" hidden>
+    <input type="text" name="MD" id="md" hidden>
+  </form> -->
+  <form th:action="${result.notificationUrl}" method="POST" id="merchant">
+    <input type="text" name="cres" id="cres" th:value="${result.cres}" hidden>
+  </form>
+
+  <div id="otp-label"></div>
+  <script th:inline="javascript">
+    /*<![CDATA[*/
+        var result = /*[[${result}]]*/ 'default';
+    /*]]>*/
+    </script>
+  <script th:src="@{/libs/jsencrypt.min.js}"></script>
+
+  <script>
+    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+    let vh = window.innerHeight * 0.01;
       // Then we set the value in the --vh custom property to the root of the document
       document.documentElement.style.setProperty("--vh", `${vh}px`);
       // We listen to the resize event
@@ -213,32 +2175,391 @@
         let vh = window.innerHeight * 0.01;
         document.documentElement.style.setProperty("--vh", `${vh}px`);
       });
-      // A $( document ).ready() block.
-      // $(document).ready(function () {
-      //   console.log("ready!");
-      //   alert("ready!");
-      // });
-      function onlyNumberKey(evt) {
-        var ASCIICode = evt.which ? evt.which : evt.keyCode;
+     $(document).ready(function () {
+      var cardno = result.cardno.replace(/\s/g, '');
+  var maskedcard = cardno.slice(-4)
+  var masked = "XXXXXXXXXXXX"+maskedcard;
+  document.getElementsByClassName("masked")[0].innerHTML = masked;
+  document.getElementsByClassName("masked")[1].innerHTML = masked;
+  // document.getElementById("rsend").style.pointerEvents = "none";
+  //           resendCount = 90;
+  //           window.clearInterval(timer);
+  //     startTimer()
+      });
+    let phoneNumberCheck = document.getElementById('phoneNumberCheck').innerText
+    let emailIdCheck = document.getElementById('emailIdCheck').innerText
+    checkFunc()
+    function checkFunc() {
+      const checkPhone = phoneNumberCheck !== '' && phoneNumberCheck.toLowerCase() !== 'false'
+      const checkEmailId = emailIdCheck !== '' && emailIdCheck.toLowerCase() !== 'false'
+      const checkPhoneAndMail = checkPhone && checkEmailId
+      // console.log(`phone: ${checkPhone}, mail: ${checkEmailId}, both: ${checkPhone && checkEmailId}`)
+      if (checkPhoneAndMail) {
+        document.getElementById('mailAndPhoneOtp').style.display = 'inline'
+      } else if (checkPhone) {
+        document.getElementById('mobileOtp').style.display = 'inline'
+      } else if (checkEmailId) {
 
-        if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57)) return false;
-        return true;
+        document.getElementById('mailOtp').style.display = 'inline'
       }
-      function modelOpenHelp() {
-        document.getElementsByClassName("model")[0].style.display = "block";
+    }
+
+    function onlyNumberKey(evt) {
+      var ASCIICode = evt.which ? evt.which : evt.keyCode;
+      if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57)) return false;
+      return true;
+    }
+    var timer
+    var resendCount = 90;
+    function startTimer(){
+     timer = setInterval(timerRsend, 1000);
+    }
+    function timerRsend() {
+      resendCount--;
+      $("#rsendTimer").css("display", "block")
+      $(".rsnd-btn").attr("disabled", true)
+      if (resendCount <= 0) {
+        document.getElementById('rsend').style.color = '#cb9395'
+        $("#rsendTimer").css("display", "none")
+        $(".rsnd-btn").attr("disabled", false)
+        document.getElementById("rsend").style.pointerEvents = "auto";
+        document.getElementsByClassName("rsnd-btn")[0].style.pointerEvents = "auto";
+        clearInterval(timer);
+        return;
+      } else {
+        $('#resendCounter').text(resendCount);
+      }
+    }
+
+    // default script
+
+    // const { result } = require("underscore");
+
+
+    const MIN_OTP_LENGTH = 6;
+    const SECOND = 1000;
+    const IVR_TIME = 30 * SECOND;
+    const IVR_HIDE_TIME = 5 * SECOND;
+    const IS_IVR_ENABLED = false;
+    const INCORRECT_MSG_HIDE_TIMER = 5 * SECOND;
+
+    let OTP_LIMIT_EXHAUSTED = false;
+    (function main() {
+      function expire() {
+        var presentDate = new Date().getTime();
+        var countDownDate = new Date(presentDate + 10 * 60000).getTime();
+
+        countDown()
+
+        var timer = setInterval(function () {
+          countDown()
+        }, 500);
+
+        function countDown() {
+          var countDownTime = countDownDate - new Date().getTime();
+
+          var minutes = Math.floor(
+            (countDownTime % (1000 * 60 * 60)) / (1000 * 60)
+          );
+          var seconds = Math.floor((countDownTime % (1000 * 60)) / 1000);
+
+          document.getElementById("exprire_time").innerHTML =
+            (minutes > 10 || minutes === 0 ? minutes : minutes) +
+            ":" +
+            (seconds < 10 ? "0" + seconds : seconds);
+
+          if (countDownTime < 0) {
+            clearInterval(timer);
+            document.getElementById("exprire_time").innerHTML = "EXPIRED";
+            expired();
+          }
+        }
+      }
+
+      // function resendOtp() {
+      //   document.getElementById("resend").style.visibility = "visible";
+      // }
+
+      function getIVR() {
+        setTimeout(function(){
+          const IVR = document.getElementById("ivr");
+          IVR.style.visibility = "visible";
+          IVR.style.marginTop = "-12px";
+          IVR.style.pointerEvents = "unset";
+        }, IVR_TIME);
+      }
+
+      function expired() {
+        console.log("expired");
+
+        $.ajax({
+          url: "/emv/auth/" + $("#bankCode").val() + "/validate/challenge",
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          data: JSON.stringify({
+            "expired": true,
+            "txnid": $("#txnid").val(),
+            "bankCode": $("#bankCode").val()
+          }), success: function (response) {
+            $("#cres").val(response.cres);
+            document.getElementById("merchant").submit();
+          }
+        })
+      }
+
+      // Execute
+      expire();
+      // resendOtp();
+      // IS_IVR_ENABLED && getIVR();
+    })();
+
+    function checkForButtonDisable(value) {
+      if (value.length === MIN_OTP_LENGTH) {
+        document.getElementById("otpsubmit").disabled = false;
+        document.getElementById("otpsubmit").style.opacity = 1;
+      }
+      else {
+        document.getElementById("otpsubmit").disabled = true;
+        document.getElementById("otpsubmit").style.opacity = 0.5;
+      }
+    }
+
+    function validateNumber(event) {
+      const keyCode = event.keyCode;
+
+      const excludedKeys = [8, 37, 39, 46];
+
+      if (
+        !(
+          (keyCode >= 48 && keyCode <= 57) ||
+          (keyCode >= 96 && keyCode <= 105) ||
+          excludedKeys.includes(keyCode)
+        )
+      ) {
+        event.preventDefault && event.preventDefault();
+      }
+    }
+
+    function changeBorderColor(flag) {
+      const authValue = document.getElementById("authValue");
+
+      if (flag) {
+        authValue.style.border = "1px solid #e5e5e5";
+      } else {
+        authValue.style.border = "1px solid #e5e5e5";
+      }
+    }
+
+    // function cancelOtp() {
+    //   // todo
+
+    //   $.ajax({
+    //     url: "/emv/auth/" + $("#bankCode").val() + "/validate/challenge",
+    //     method: "POST",
+    //     headers: { "Content-Type": "application/json" },
+    //     data: JSON.stringify({
+    //       "cancelled": true,
+    //       "txnid": $("#txnid").val(),
+    //       "bankCode": $("#bankCode").val()
+    //     }), success: function (response) {
+    //       $("#cres").val(response.pares);
+    //       document.getElementById("merchant").submit();
+    //     }
+    //   })
+    // }
+
+    function resendOtp() {
+      // Limit exhausted
+      document.getElementById('limit-exhausted-title').style.display = 'none'
+      document.getElementById('limit-exhausted-desc').style.display = 'none'
+      document.getElementById('rsend').style.color = '#808080'
+      $.ajax({
+        url: "/emv/auth/" + $("#bankCode").val() + "/resend",
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        data: JSON.stringify({
+          "txnid": $("#txnid").val(),
+          "bankCode": $("#bankCode").val(),
+          "authType": "OTP"
+        }), success: function (response) {
+
+          if (response.result) {
+            console.log(response.result)
+            document.getElementById("rsend").style.pointerEvents = "none";
+            resendCount = 90;
+      window.clearInterval(timer);
+      startTimer()
+            hideIncorrectOTP()
+            const element = document.getElementById("otp-label");
+            element.innerHTML = "<div class='rectangle'> <div class='notification-text'> <span>OTP Resent</span> </div> </div>";
+            document.getElementById('otp-label').style.position = 'fixed'
+            // document.getElementById('otpRefId').innerText = response.otpreferenceid;
+            $("#otp-label").addClass('slide-top');
+            setTimeout(function () {
+              $("#otp-label").removeClass('slide-top');
+            }, 2000);
+          } else {
+            limitExhausted()
+            // $("#message").html(response.message);
+            // $("#message").css("display", "block");
+          }
+        }
+      })
+    }
+
+    function payAmount() {
+
+      jsencrypt = new JSEncrypt();
+      var key = $("#key").html();
+      jsencrypt.setPublicKey(key);
+
+
+      $.ajax({
+        url: "/emv/auth/" + $("#bankCode").val() + "/validate/challenge",
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        data: JSON.stringify({
+          "authValue": jsencrypt.encrypt($("#authValue").val()),
+          "authType": "OTP",
+          "txnid": $("#txnid").val(),
+          "seamlessPay": false,
+          "bankCode": $("#bankCode").val()
+        }), success: function (response) {
+          console.log(response)
+          if (response.result) {
+            $("#cres").val(response.cres);
+            document.getElementById("merchant").submit();
+          } else {
+            if (response.retry) {
+              $("#incorrect-otp .incorrect-otp").html(response.message);
+              $("#incorrect-otp").css("display", "flex");
+              // if response fails then enable incorrect otp message using below code snippet
+              if (OTP_LIMIT_EXHAUSTED) {
+                document.getElementById('limit-exhausted-title').style.display = 'none'
+              } else {
+                document.getElementById('limit-exhausted-desc').style.display = 'none'
+              }
+
+              // document.getElementById("incorrect-otp").style.display = "inline";
+              document.getElementById("authValue").style.border = "1px solid #E77464";
+              errorAfterOTPExhausted(INCORRECT_MSG_HIDE_TIMER)
+              setTimeout(function(){
+                hideIncorrectOTP()
+                showExhaustedHeader()
+              }, INCORRECT_MSG_HIDE_TIMER)
+            } else {
+              $("#cres").val(response.cres);
+              document.getElementById("merchant").submit();
+            }
+          }
+
+        }
+      })
+    }
+
+    function registerKeyDown() {
+      const input = document.getElementById("authValue");
+      input.onkeydown = validateNumber;
+    }
+
+    registerKeyDown();
+
+    // Hide IVR
+    function IVRCallSent() {
+      document.getElementById("ivr-btn").style.display = "none";
+      document.getElementById("ivr-call-sent").style.display = "flex";
+
+      setTimeout(function() {
+        const IVR = document.getElementById("ivr");
+
+        IVR.style.visibility = "hidden";
+        IVR.style.marginTop = "-64px";
+        IVR.style.pointerEvents = "none";
+      }, IVR_HIDE_TIME);
+    }
+
+    function limitExhausted() {
+
+      document.getElementById('limit-exhausted-title').style.display = 'flex'
+      // document.getElementById('limit-exhausted-desc').style.display = 'flex'
+      // document.getElementById('otp-content').style.display = 'none'
+      // document.getElementById('resend').style.display = 'none'
+
+      OTP_LIMIT_EXHAUSTED = true;
+    }
+
+    function errorAfterOTPExhausted(time) {
+      document.getElementById('limit-exhausted-title').style.display = 'none'
+      document.getElementById('limit-exhausted-desc').style.display = 'none'
+      document.getElementById("incorrect-otp").style.display = "flex";
+      setTimeout(function(){
+        if (OTP_LIMIT_EXHAUSTED) {
+          document.getElementById("incorrect-otp").style.display = "none";
+        }
+      }, time);
+    }
+
+    function showExhaustedHeader() {
+      if (OTP_LIMIT_EXHAUSTED) {
+        // document.getElementById('limit-exhausted-title').style.display = 'flex';
+      }
+    }
+
+    function hideIncorrectOTP() {
+      document.getElementById("incorrect-otp").style.display = "none";
+    }
+    function modelOpenHelp() {
+      $.ajax({
+        url: "/vbv/auth/fetchTcAndHp",
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        data: JSON.stringify({
+          "supportingAuthValue":"debit-hp"
+        }), success: function (response) {
+          document.getElementsByClassName("model")[0].style.display = "block";
+          document.getElementsByClassName("model-pad")[0].innerHTML = response.message;
+        }
+      })
+        // document.getElementsByClassName("model")[0].style.display = "block";
 
         // document.getElementsByClassName("model-pad")[0].innerHTML = ``;
       }
       function modelOpenTerms() {
-        document.getElementsByClassName("model")[0].style.display = "block";
+        $.ajax({
+        url: "/vbv/auth/fetchTcAndHp",
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        data: JSON.stringify({
+          "supportingAuthValue":"debit-tc"
+        }), success: function (response) {
+          document.getElementsByClassName("model")[0].style.display = "block";
+          document.getElementsByClassName("model-pad")[0].innerHTML = response.message;
+        }
+      })
+        // document.getElementsByClassName("model")[0].style.display = "block";
 
         // document.getElementsByClassName("model-pad")[0].innerHTML = ``;
       }
       function modelClose() {
         document.getElementsByClassName("model")[0].style.display = "none";
-        // document.getElementsByClassName("model-pad")[0].innerHTML = "";
+        document.getElementsByClassName("model-pad")[0].innerHTML = "";
       }
       function modelCfrmOpen() {
+      //   $.ajax({
+      //   url: "",
+      //   method: "POST",
+      //   headers: { "Content-Type": "application/json" },
+      //   data: JSON.stringify({
+      //     "cancelled": true,
+      //     "txnid": $("#txnid").val(),
+      //     "bankCode": $("#bankCode").val()
+      //   }), success: function (response) {
+      //     document.getElementsByClassName("model-cfrm")[0].style.display = "flex";
+      //   document.getElementsByClassName("back-drop")[0].style.display = "block";
+      //   }
+      // })
+
+
         document.getElementsByClassName("model-cfrm")[0].style.display = "flex";
         document.getElementsByClassName("back-drop")[0].style.display = "block";
       }
@@ -246,6 +2567,21 @@
         document.getElementsByClassName("model-cfrm")[0].style.display = "none";
         document.getElementsByClassName("back-drop")[0].style.display = "none";
       }
-    </script>
-  </body>
+      function cancelPayment(){
+        $.ajax({
+        url: "/emv/auth/" + $("#bankCode").val() + "/validate/challenge",
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        data: JSON.stringify({
+          "cancelled": true,
+          "txnid": $("#txnid").val(),
+          "bankCode": $("#bankCode").val()
+        }), success: function (response) {
+          $("#cres").val(response.cres);
+          document.getElementById("merchant").submit();
+        }
+      })}
+  </script>
+</body>
+
 </html>
