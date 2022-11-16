@@ -8,14 +8,16 @@
 body {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  overflow-y: scroll;
+  overflow: hidden;
+  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
   min-height: -webkit-fill-available;
   justify-content: space-between;
 }
 html {
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 .parent-container {
   position: relative;
