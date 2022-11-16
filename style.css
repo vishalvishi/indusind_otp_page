@@ -1162,7 +1162,7 @@ html {
     align-items: center;
   }
 }
-@media only screen and (max-width: 600px) and (min-height: 450px) {
+@media only screen and (max-width: 600px) and (min-width: 300px) {
   .model-cfrm {
     top: 50%;
     bottom: 50%;
