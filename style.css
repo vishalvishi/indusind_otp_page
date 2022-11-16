@@ -5,7 +5,7 @@ body,
 html {
   margin: 0;
   padding: 0;
-  overflow: hidden;
+/*   overflow: hidden; */
 }
 .parent-container {
   position: relative;
@@ -440,7 +440,7 @@ html {
     font-family: "Roboto", sans-serif;
   }
   .parent-container {
-    height: 100vh;
+/*     height: 100vh; */
     width: 100vw;
     flex-direction: column;
     display: flex;
@@ -795,7 +795,7 @@ html {
   }
   .parent-container {
     flex-direction: column;
-    height: 100vh;
+/*     height: 100vh; */
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -1127,7 +1127,7 @@ html {
   }
   .parent-container {
     flex-direction: column;
-    height: 100vh;
+/*     height: 100vh; */
     width: 100vw;
     display: flex;
     justify-content: center;
