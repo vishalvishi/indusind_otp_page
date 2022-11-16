@@ -111,6 +111,10 @@ html {
   font-family: sans-serif;
 }
 @media only screen and (max-width: 299px) {
+  body,
+html {
+  overflow: hidden;
+}
   .model {
     top: 48px;
     height: 67vh;
@@ -476,7 +480,10 @@ html {
   }
 }
 @media only screen and (min-width: 300px) and (max-width: 599px) {
-
+  body,
+html {
+  overflow: hidden;
+}
   .model-cfrm {
     top: auto;
     height: 28vh;
@@ -831,10 +838,7 @@ html {
   }
 }
 @media only screen and (min-width: 600px) and (max-width: 1900px) {
-    body,
-html {
-  overflow: hidden;
-}
+
   .model-cfrm {
     top: auto;
     height: 28vh;
@@ -1167,10 +1171,7 @@ html {
   }
 }
 @media only screen and (max-width: 600px) and (min-height: 450px) {
-      body,
-html {
-  overflow: hidden;
-}
+
   .model-cfrm {
     top: auto;
     height: 28vh;
@@ -1534,10 +1535,7 @@ html {
   }
 }
 @media only screen and (min-width: 600px) and (min-height: 449px) {
-      body,
-html {
-  overflow: hidden;
-}
+
   .model-cfrm {
     top: auto;
     height: 28vh;
