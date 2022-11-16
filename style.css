@@ -476,6 +476,9 @@ html {
   }
 }
 @media only screen and (min-width: 300px) and (max-width: 599px) {
+  body{
+        overflow-x:scroll;
+      }
   .model-cfrm {
     top: auto;
     height: 28vh;
