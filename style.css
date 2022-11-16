@@ -5,7 +5,7 @@ body,
 html {
   margin: 0;
   padding: 0;
-/*   overflow: hidden; */
+  overflow: hidden;
 }
 .parent-container {
   position: relative;
@@ -476,6 +476,7 @@ html {
   }
 }
 @media only screen and (min-width: 300px) and (max-width: 599px) {
+
   .model-cfrm {
     top: auto;
     height: 28vh;
@@ -830,6 +831,10 @@ html {
   }
 }
 @media only screen and (min-width: 600px) and (max-width: 1900px) {
+    body,
+html {
+  overflow: hidden;
+}
   .model-cfrm {
     top: auto;
     height: 28vh;
@@ -1162,6 +1167,10 @@ html {
   }
 }
 @media only screen and (max-width: 600px) and (min-height: 450px) {
+      body,
+html {
+  overflow: hidden;
+}
   .model-cfrm {
     top: auto;
     height: 28vh;
@@ -1525,6 +1534,10 @@ html {
   }
 }
 @media only screen and (min-width: 600px) and (min-height: 449px) {
+      body,
+html {
+  overflow: hidden;
+}
   .model-cfrm {
     top: auto;
     height: 28vh;
